@@ -1,0 +1,9 @@
+
+1) c to IR (.ll)
+  clang++ -S -emit-llvm *.c 
+
+2) IR to asm
+  llc *.ll
+
+3) assembly to machine
+  clang++ *.asm
