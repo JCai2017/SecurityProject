@@ -6,9 +6,17 @@ using std::cin;
 int main() {
   Crypto crypto;
 
-  #ifdef PRINT_KEYS
+  unsigned char aeskey[AES_KEYLEN];
+  unsigned char rsakey[RSA_KEYLEN];
+  memset(aeskey, 0, AES_KEYLEN);
+  memset(rsakey, 0, RSA_KEYLEN);
+  crypto.setAesKey(aeskey, AES_KEYLEN);
+  crypto.setAesIv(aeskey, AES_KEYLEN);
+  crypto.setRemotePublicKey(rsakey, RSA_KEYLEN);
+
+//  #ifdef PRINT_KEYS
     printKeys(&crypto);
-  #endif
+//  #endif
 
   while(!std::cin.eof()) {
     encryptRsa(&crypto);
