@@ -7,21 +7,21 @@ int main() {
   Crypto crypto;
 
   unsigned char aeskey[AES_KEYLEN];
-  unsigned char rsakey[RSA_KEYLEN];
+//  unsigned char rsakey[RSA_KEYLEN];
   memset(aeskey, 0, AES_KEYLEN);
-  memset(rsakey, 0, RSA_KEYLEN);
+//  memset(rsakey, 0, RSA_KEYLEN);
   crypto.setAesKey(aeskey, AES_KEYLEN);
   crypto.setAesIv(aeskey, AES_KEYLEN);
-  crypto.setRemotePublicKey(rsakey, RSA_KEYLEN);
+//  crypto.setRemotePublicKey(rsakey, RSA_KEYLEN);
 
 //  #ifdef PRINT_KEYS
-    printKeys(&crypto);
+//    printKeys(&crypto);
 //  #endif
 
-  while(!std::cin.eof()) {
-    encryptRsa(&crypto);
+//  if(!std::cin.eof()) {//while
+//    encryptRsa(&crypto);
     encryptAes(&crypto);
-  }
+//  }
 
   return 0;
 }
@@ -79,7 +79,8 @@ void encryptRsa(Crypto *crypto) {
 
 void encryptAes(Crypto *crypto) {
   // Get the message to encrypt
-  string message = getMessage("Message to AES encrypt: ");
+  //string message = getMessage("Message to AES encrypt: ");
+  string message = "hello";
 
   // Encrypt the message with AES
   unsigned char *encryptedMessage = NULL;
@@ -92,7 +93,7 @@ void encryptAes(Crypto *crypto) {
 
   // Print the encrypted message as a base64 string
   char *b64Message = base64Encode(encryptedMessage, encryptedMessageLength);
-  printf("Encrypted message: %s\n", b64Message);
+//  printf("Encrypted message: %s\n", b64Message);
 
   // Decrypt the message
   char *decryptedMessage = NULL;
@@ -103,7 +104,7 @@ void encryptAes(Crypto *crypto) {
     return;
   }
 
-  printf("Decrypted message: %s\n", decryptedMessage);
+//  printf("Decrypted message: %s\n", decryptedMessage);
 
   // Clean up
   free(encryptedMessage);
