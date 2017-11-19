@@ -6,8 +6,9 @@ int main(void){
   volatile uint32_t result = 0;
   volatile uint32_t a = 100;
   volatile uint32_t b = 200;
+  int k;
  
-  for (int k = 0; k < 1000; k++){
+  for (k = 0; k < 10000; k++){
     result = a + b;
   }
   
