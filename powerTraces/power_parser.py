@@ -2,8 +2,7 @@
 # python power_parser.py run_results-energy.json <outputfile>.csv
 
 import sys
-import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 #def getValue(string)
 
@@ -57,8 +56,8 @@ with open(sys.argv[2], 'w') as f:
 		f.write("\n")
 
 # output graph 
-print(sum_list)
-print(event_values[0])
-print(len(event_values[0]))
-plt.plot(event_values[0], sum_list)
+#print(sum_list)
+#print(event_values[0])
+#print(len(event_values[0]))
+#plt.plot(event_values[0], sum_list)
 		
