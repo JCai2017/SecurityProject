@@ -1,9 +1,29 @@
 # Generator script for C programs
 
-with open("database/test.c", "w") as f:
-	f.write("#include <stdint.h>\n")
-	f.write("\n")
-	f.write("int main(void){\n")
-	f.write("\n")
-	f.write("  return 0;\n\n}\n") 
-	f.close()
+opList = ["+", "-", "*", "/", "%", "<<", ">>"]
+constList = ["CONSTANT_2", "CONSTANT_32", "CONSTANT_BIG"]
+varList = ["a", "b"]
+
+def start_for_loop(loopsize):
+	f.write("  for (i = 0; i < " + str(loopsize) + "; i++){\n")
+	
+
+counter = 0
+
+for op in opList:
+	for con in constList:
+		for var in varList:
+			filename = "database/datapoint" + str(counter) + ".c"
+			with open(filename, "w") as f:
+				f.write("#include <stdint.h>\n\n")
+				f.write("#define CONSTANT_2 2\n")
+				f.write("#define CONSTANT_32 32\n")
+				f.write("#define CONSTANT_BIG 15485863\n")
+				f.write("int main(void){\n")
+				f.write("  volatile int32_t a = 10;\n  volatile int32_t b = 13;\n  volatile int32_t result;\n  int i;\n\n")
+				start_for_loop(5000)
+				f.write("    result = " + var + " " + op + " " + con + ";\n")
+				f.write("  }\n\n") # end for loop
+				f.write("  return 0;\n\n}\n") 
+				f.close()
+				counter += 1
