@@ -3,7 +3,7 @@ import sys
 import csv
 import os
 
-outputfilename = "results.txt"
+outputfilename = "results.csv"
 
 open(outputfilename, "w").close()
 
