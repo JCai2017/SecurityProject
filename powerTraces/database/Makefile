@@ -4,9 +4,10 @@ PROG=$(patsubst %.c,%,$(SRCS))
 
 all: $(PROG)
 
-%: %.c
-	$(CC) -o $@ $<
+%: %.c %.s
+#	$(CC) -o $@ $<
 	$(CC) -S $<
+	$(CC) -o $@ $(word 2, $^)
 
 clean:
 	rm -rf $(PROG)
