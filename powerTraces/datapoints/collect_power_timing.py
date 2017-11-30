@@ -3,7 +3,9 @@ import sys
 import csv
 import os
 
-open("results.txt", "w").close()
+outputfilename = "results.txt"
+
+open(outputfilename, "w").close()
 
 for datapointdir in os.listdir('.'):
 	if "." not in datapointdir:
@@ -11,7 +13,7 @@ for datapointdir in os.listdir('.'):
 			csvreader = csv.reader(powercsv, delimiter=',')
 			datarows = list(csvreader)
 			# print(datarows[93 + 1][-1]) # +1 for the header row, -1 gets last element
-			with open("results.txt", 'a+') as outfile:
+			with open(outputfilename, 'a+') as outfile:
 				time = 1
 				while (abs(float(datarows[93+1+time][-1]) - float(datarows[93+1][-1])) < 1):
 					time += 1
