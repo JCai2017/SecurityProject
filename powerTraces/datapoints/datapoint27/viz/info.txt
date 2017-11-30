@@ -1,5 +1,5 @@
 title = 'datapoint27';
-num_intervals = '101';
+num_intervals = '115';
 interval = '1000000000';
 use_level2 = 1;
 use_mcpat = 1;

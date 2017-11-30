@@ -1,5 +1,5 @@
 title = 'Basic';
-num_intervals = '122';
+num_intervals = '193';
 interval = '1000000000';
 use_level2 = 1;
 use_mcpat = 1;
