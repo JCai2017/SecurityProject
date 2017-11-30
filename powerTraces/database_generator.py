@@ -10,6 +10,15 @@ def start_for_loop(loopsize):
 
 counter = 0
 
+open("database/database.h", "w").close()
+
+with open("database/database.h", "w+") as f:
+	f.write("#include <stdint.h>\n\n")
+	f.write("#define CONSTANT_2 2\n")
+	f.write("#define CONSTANT_32 32\n")
+	f.write("#define CONSTANT_BIG 15485863\n")
+	f.write("#define INIT_LOCALS \"volatile int32_t a = 10; volatile int32_t b = 13; volatile int32_t result;\" \n")
+
 for op in opList:
 	for con in constList:
 		for var in varList:
@@ -27,3 +36,6 @@ for op in opList:
 				f.write("  return 0;\n\n}\n") 
 				f.close()
 				counter += 1
+			with open("database/database.h", "a+") as f:
+				resstring = "  result = " + var + " " + op + " " + con + ";"
+				f.write("#define DATAPOINT" + str(counter) + " " + "\"void datapoint" + str(counter) + "(void){" + resstring + "}\"\n")
