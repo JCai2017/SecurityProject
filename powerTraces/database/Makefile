@@ -6,6 +6,7 @@ all: $(PROG)
 
 %: %.c
 	$(CC) -o $@ $<
+	$(CC) -S $<
 
 clean:
 	rm -rf $(PROG)
