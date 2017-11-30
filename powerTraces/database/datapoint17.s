@@ -1,33 +1,36 @@
 	.file	"datapoint17.c"
 	.text
 	.globl	main
-	.type	main, @function
-main:
-.LFB0:
+	.align	16, 0x90
+	.type	main,@function
+main:                                   # @main
+.Ltmp0:
 	.cfi_startproc
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movl	$10, -16(%rbp)
-	movl	$13, -12(%rbp)
-	movl	$0, -4(%rbp)
-	jmp	.L2
-.L3:
-	movl	-12(%rbp), %eax
-	imull	$15485863, %eax, %eax
-	movl	%eax, -8(%rbp)
-	addl	$1, -4(%rbp)
-.L2:
-	cmpl	$4999, -4(%rbp)
-	jle	.L3
+# BB#0:
+	movl	$0, -4(%rsp)
+	movl	$10, -8(%rsp)
+	movl	$13, -12(%rsp)
+	movl	$0, -20(%rsp)
+.LBB0_1:                                # =>This Inner Loop Header: Depth=1
+	cmpl	$5000, -20(%rsp)        # imm = 0x1388
+	jge	.LBB0_4
+# BB#2:                                 #   in Loop: Header=BB0_1 Depth=1
+	movl	-12(%rsp), %eax
+	imull	$15485863, %eax, %eax   # imm = 0xEC4BA7
+	movl	%eax, -16(%rsp)
+# BB#3:                                 #   in Loop: Header=BB0_1 Depth=1
+	movl	-20(%rsp), %eax
+	addl	$1, %eax
+	movl	%eax, -20(%rsp)
+	jmp	.LBB0_1
+.LBB0_4:
 	movl	$0, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
 	ret
+.Ltmp1:
+	.size	main, .Ltmp1-main
+.Ltmp2:
 	.cfi_endproc
-.LFE0:
-	.size	main, .-main
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
-	.section	.note.GNU-stack,"",@progbits
+.Leh_func_end0:
+
+
+	.section	".note.GNU-stack","",@progbits

@@ -1,77 +1,90 @@
 	.file	"qSort.c"
 	.text
 	.globl	cmpfunc
-	.type	cmpfunc, @function
-cmpfunc:
-.LFB2:
+	.align	16, 0x90
+	.type	cmpfunc,@function
+cmpfunc:                                # @cmpfunc
+.Ltmp0:
 	.cfi_startproc
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movq	%rdi, -8(%rbp)
-	movq	%rsi, -16(%rbp)
-	movq	-8(%rbp), %rax
-	movl	(%rax), %edx
-	movq	-16(%rbp), %rax
-	movl	(%rax), %eax
-	subl	%eax, %edx
-	movl	%edx, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
+# BB#0:
+	movq	%rdi, -8(%rsp)
+	movq	%rsi, -16(%rsp)
+	movq	-8(%rsp), %rsi
+	movl	(%rsi), %eax
+	movq	-16(%rsp), %rsi
+	subl	(%rsi), %eax
 	ret
+.Ltmp1:
+	.size	cmpfunc, .Ltmp1-cmpfunc
+.Ltmp2:
 	.cfi_endproc
-.LFE2:
-	.size	cmpfunc, .-cmpfunc
+.Leh_func_end0:
+
 	.globl	main
-	.type	main, @function
-main:
-.LFB3:
+	.align	16, 0x90
+	.type	main,@function
+main:                                   # @main
+.Ltmp5:
 	.cfi_startproc
+# BB#0:
 	pushq	%rbp
+.Ltmp6:
 	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
+.Ltmp7:
+	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	subq	$64, %rsp
-	movq	%fs:40, %rax
-	movq	%rax, -8(%rbp)
-	xorl	%eax, %eax
-	movl	$0, -52(%rbp)
-	jmp	.L4
-.L5:
-	movl	$6, -48(%rbp)
-	movl	$3, -44(%rbp)
-	movl	$1, -40(%rbp)
-	movl	$5, -36(%rbp)
-	movl	$9, -32(%rbp)
-	movl	$2, -28(%rbp)
-	movl	$4, -24(%rbp)
-	movl	$8, -20(%rbp)
-	movl	$7, -16(%rbp)
-	movl	$0, -12(%rbp)
+.Ltmp8:
+	.cfi_def_cfa_register %rbp
+	subq	$48, %rsp
+	movl	$0, -4(%rbp)
+	movl	$0, -8(%rbp)
+.LBB1_1:                                # =>This Inner Loop Header: Depth=1
+	cmpl	$5000, -8(%rbp)         # imm = 0x1388
+	jge	.LBB1_4
+# BB#2:                                 #   in Loop: Header=BB1_1 Depth=1
+	leaq	.Lmain.arr, %rax
+	movabsq	$40, %rdx
+	leaq	-48(%rbp), %rcx
+	movq	%rcx, %rdi
+	movq	%rax, %rsi
+	callq	memcpy
+	movabsq	$10, %rsi
+	movabsq	$4, %rdx
+	leaq	cmpfunc, %rcx
 	leaq	-48(%rbp), %rax
-	movl	$cmpfunc, %ecx
-	movl	$4, %edx
-	movl	$10, %esi
 	movq	%rax, %rdi
-	call	qsort
-	addl	$1, -52(%rbp)
-.L4:
-	cmpl	$4999, -52(%rbp)
-	jle	.L5
+	callq	qsort
+# BB#3:                                 #   in Loop: Header=BB1_1 Depth=1
+	movl	-8(%rbp), %eax
+	addl	$1, %eax
+	movl	%eax, -8(%rbp)
+	jmp	.LBB1_1
+.LBB1_4:
 	movl	$0, %eax
-	movq	-8(%rbp), %rdx
-	xorq	%fs:40, %rdx
-	je	.L7
-	call	__stack_chk_fail
-.L7:
-	leave
-	.cfi_def_cfa 7, 8
+	addq	$48, %rsp
+	popq	%rbp
 	ret
+.Ltmp9:
+	.size	main, .Ltmp9-main
+.Ltmp10:
 	.cfi_endproc
-.LFE3:
-	.size	main, .-main
-	.ident	"GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.4) 5.4.0 20160609"
-	.section	.note.GNU-stack,"",@progbits
+.Leh_func_end1:
+
+	.type	.Lmain.arr,@object      # @main.arr
+	.section	.rodata.str4.16,"aMS",@progbits,4
+	.align	16
+.Lmain.arr:
+	.long	6                       # 0x6
+	.long	3                       # 0x3
+	.long	1                       # 0x1
+	.long	5                       # 0x5
+	.long	9                       # 0x9
+	.long	2                       # 0x2
+	.long	4                       # 0x4
+	.long	8                       # 0x8
+	.long	7                       # 0x7
+	.long	0                       # 0x0
+	.size	.Lmain.arr, 40
+
+
+	.section	".note.GNU-stack","",@progbits
