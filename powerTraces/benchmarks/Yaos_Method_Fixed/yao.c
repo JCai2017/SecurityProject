@@ -1,6 +1,7 @@
 #include<stdint.h>
 
 #define CONSTANT_2 2;
+#define CONSTANT_BIG 15485863;
 
 int main(void){
   volatile uint32_t x = 3;
@@ -22,7 +23,7 @@ int main(void){
         result = result * xbi;
        }else {
          for(k = 0; k < 5000; k ++){
-           temp = a << 4;
+           temp = a + CONSTANT_BIG;
            __asm__("FNOP");
          }
        }
