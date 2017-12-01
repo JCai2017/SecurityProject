@@ -1,0 +1,32 @@
+digraph "CFG for 'stbtt_GetGlyphBox' function" {
+	label="CFG for 'stbtt_GetGlyphBox' function";
+
+	Node0x29e9990 [shape=record,label="{%6:\l  %7 = alloca i32, align 4\l  %8 = alloca %struct.stbtt_fontinfo*, align 8\l  %9 = alloca i32, align 4\l  %10 = alloca i32*, align 8\l  %11 = alloca i32*, align 8\l  %12 = alloca i32*, align 8\l  %13 = alloca i32*, align 8\l  %14 = alloca i32, align 4\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %8, align 8\l  store i32 %1, i32* %9, align 4\l  store i32* %2, i32** %10, align 8\l  store i32* %3, i32** %11, align 8\l  store i32* %4, i32** %12, align 8\l  store i32* %5, i32** %13, align 8\l  %15 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %8, align 8\l  %16 = load i32, i32* %9, align 4\l  %17 = call i32 @stbtt__GetGlyfOffset(%struct.stbtt_fontinfo* %15, i32 %16)\l  store i32 %17, i32* %14, align 4\l  %18 = load i32, i32* %14, align 4\l  %19 = icmp slt i32 %18, 0\l  br i1 %19, label %20, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x29e9990:s0 -> Node0x29ea4c0;
+	Node0x29e9990:s1 -> Node0x29ea510;
+	Node0x29ea4c0 [shape=record,label="{%20:\l\l  store i32 0, i32* %7, align 4\l  br label %78\l}"];
+	Node0x29ea4c0 -> Node0x29ea620;
+	Node0x29ea510 [shape=record,label="{%21:\l\l  %22 = load i32*, i32** %10, align 8\l  %23 = icmp ne i32* %22, null\l  br i1 %23, label %24, label %35\l|{<s0>T|<s1>F}}"];
+	Node0x29ea510:s0 -> Node0x29ea7b0;
+	Node0x29ea510:s1 -> Node0x29ea800;
+	Node0x29ea7b0 [shape=record,label="{%24:\l\l  %25 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %8, align 8\l  %26 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %25, i32 0, i32 1\l  %27 = load i8*, i8** %26, align 8\l  %28 = load i32, i32* %14, align 4\l  %29 = sext i32 %28 to i64\l  %30 = getelementptr inbounds i8, i8* %27, i64 %29\l  %31 = getelementptr inbounds i8, i8* %30, i64 2\l  %32 = call signext i16 @ttSHORT(i8* %31)\l  %33 = sext i16 %32 to i32\l  %34 = load i32*, i32** %10, align 8\l  store i32 %33, i32* %34, align 4\l  br label %35\l}"];
+	Node0x29ea7b0 -> Node0x29ea800;
+	Node0x29ea800 [shape=record,label="{%35:\l\l  %36 = load i32*, i32** %11, align 8\l  %37 = icmp ne i32* %36, null\l  br i1 %37, label %38, label %49\l|{<s0>T|<s1>F}}"];
+	Node0x29ea800:s0 -> Node0x29ea270;
+	Node0x29ea800:s1 -> Node0x29eb110;
+	Node0x29ea270 [shape=record,label="{%38:\l\l  %39 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %8, align 8\l  %40 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %39, i32 0, i32 1\l  %41 = load i8*, i8** %40, align 8\l  %42 = load i32, i32* %14, align 4\l  %43 = sext i32 %42 to i64\l  %44 = getelementptr inbounds i8, i8* %41, i64 %43\l  %45 = getelementptr inbounds i8, i8* %44, i64 4\l  %46 = call signext i16 @ttSHORT(i8* %45)\l  %47 = sext i16 %46 to i32\l  %48 = load i32*, i32** %11, align 8\l  store i32 %47, i32* %48, align 4\l  br label %49\l}"];
+	Node0x29ea270 -> Node0x29eb110;
+	Node0x29eb110 [shape=record,label="{%49:\l\l  %50 = load i32*, i32** %12, align 8\l  %51 = icmp ne i32* %50, null\l  br i1 %51, label %52, label %63\l|{<s0>T|<s1>F}}"];
+	Node0x29eb110:s0 -> Node0x29eb7b0;
+	Node0x29eb110:s1 -> Node0x29f9590;
+	Node0x29eb7b0 [shape=record,label="{%52:\l\l  %53 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %8, align 8\l  %54 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %53, i32 0, i32 1\l  %55 = load i8*, i8** %54, align 8\l  %56 = load i32, i32* %14, align 4\l  %57 = sext i32 %56 to i64\l  %58 = getelementptr inbounds i8, i8* %55, i64 %57\l  %59 = getelementptr inbounds i8, i8* %58, i64 6\l  %60 = call signext i16 @ttSHORT(i8* %59)\l  %61 = sext i16 %60 to i32\l  %62 = load i32*, i32** %12, align 8\l  store i32 %61, i32* %62, align 4\l  br label %63\l}"];
+	Node0x29eb7b0 -> Node0x29f9590;
+	Node0x29f9590 [shape=record,label="{%63:\l\l  %64 = load i32*, i32** %13, align 8\l  %65 = icmp ne i32* %64, null\l  br i1 %65, label %66, label %77\l|{<s0>T|<s1>F}}"];
+	Node0x29f9590:s0 -> Node0x29eadc0;
+	Node0x29f9590:s1 -> Node0x29eae10;
+	Node0x29eadc0 [shape=record,label="{%66:\l\l  %67 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %8, align 8\l  %68 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %67, i32 0, i32 1\l  %69 = load i8*, i8** %68, align 8\l  %70 = load i32, i32* %14, align 4\l  %71 = sext i32 %70 to i64\l  %72 = getelementptr inbounds i8, i8* %69, i64 %71\l  %73 = getelementptr inbounds i8, i8* %72, i64 8\l  %74 = call signext i16 @ttSHORT(i8* %73)\l  %75 = sext i16 %74 to i32\l  %76 = load i32*, i32** %13, align 8\l  store i32 %75, i32* %76, align 4\l  br label %77\l}"];
+	Node0x29eadc0 -> Node0x29eae10;
+	Node0x29eae10 [shape=record,label="{%77:\l\l  store i32 1, i32* %7, align 4\l  br label %78\l}"];
+	Node0x29eae10 -> Node0x29ea620;
+	Node0x29ea620 [shape=record,label="{%78:\l\l  %79 = load i32, i32* %7, align 4\l  ret i32 %79\l}"];
+}

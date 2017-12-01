@@ -1,0 +1,12 @@
+digraph "CFG for 'stbi__zlib_bitrev' function" {
+	label="CFG for 'stbi__zlib_bitrev' function";
+
+	Node0x298d6e0 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store i32 %0, i32* %3, align 4\l  store i32 %1, i32* %4, align 4\l  store i32 0, i32* %5, align 4\l  br label %6\l}"];
+	Node0x298d6e0 -> Node0x298da90;
+	Node0x298da90 [shape=record,label="{%6:\l\l  %7 = load i32, i32* %4, align 4\l  %8 = add nsw i32 %7, -1\l  store i32 %8, i32* %4, align 4\l  %9 = icmp ne i32 %7, 0\l  br i1 %9, label %10, label %18\l|{<s0>T|<s1>F}}"];
+	Node0x298da90:s0 -> Node0x298d850;
+	Node0x298da90:s1 -> Node0x298dcf0;
+	Node0x298d850 [shape=record,label="{%10:\l\l  %11 = load i32, i32* %5, align 4\l  %12 = shl i32 %11, 1\l  %13 = load i32, i32* %3, align 4\l  %14 = and i32 %13, 1\l  %15 = or i32 %12, %14\l  store i32 %15, i32* %5, align 4\l  %16 = load i32, i32* %3, align 4\l  %17 = ashr i32 %16, 1\l  store i32 %17, i32* %3, align 4\l  br label %6\l}"];
+	Node0x298d850 -> Node0x298da90;
+	Node0x298dcf0 [shape=record,label="{%18:\l\l  %19 = load i32, i32* %5, align 4\l  ret i32 %19\l}"];
+}

@@ -1,0 +1,20 @@
+digraph "CFG for 'stbi__paeth' function" {
+	label="CFG for 'stbi__paeth' function";
+
+	Node0x29a45a0 [shape=record,label="{%3:\l  %4 = alloca i8, align 1\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca i32, align 4\l  store i32 %0, i32* %5, align 4\l  store i32 %1, i32* %6, align 4\l  store i32 %2, i32* %7, align 4\l  %12 = load i32, i32* %5, align 4\l  %13 = load i32, i32* %6, align 4\l  %14 = add nsw i32 %12, %13\l  %15 = load i32, i32* %7, align 4\l  %16 = sub nsw i32 %14, %15\l  store i32 %16, i32* %8, align 4\l  %17 = load i32, i32* %8, align 4\l  %18 = load i32, i32* %5, align 4\l  %19 = sub nsw i32 %17, %18\l  %20 = call i32 @abs(i32 %19) #8\l  store i32 %20, i32* %9, align 4\l  %21 = load i32, i32* %8, align 4\l  %22 = load i32, i32* %6, align 4\l  %23 = sub nsw i32 %21, %22\l  %24 = call i32 @abs(i32 %23) #8\l  store i32 %24, i32* %10, align 4\l  %25 = load i32, i32* %8, align 4\l  %26 = load i32, i32* %7, align 4\l  %27 = sub nsw i32 %25, %26\l  %28 = call i32 @abs(i32 %27) #8\l  store i32 %28, i32* %11, align 4\l  %29 = load i32, i32* %9, align 4\l  %30 = load i32, i32* %10, align 4\l  %31 = icmp sle i32 %29, %30\l  br i1 %31, label %32, label %39\l|{<s0>T|<s1>F}}"];
+	Node0x29a45a0:s0 -> Node0x29a5790;
+	Node0x29a45a0:s1 -> Node0x29a57e0;
+	Node0x29a5790 [shape=record,label="{%32:\l\l  %33 = load i32, i32* %9, align 4\l  %34 = load i32, i32* %11, align 4\l  %35 = icmp sle i32 %33, %34\l  br i1 %35, label %36, label %39\l|{<s0>T|<s1>F}}"];
+	Node0x29a5790:s0 -> Node0x29a4e30;
+	Node0x29a5790:s1 -> Node0x29a57e0;
+	Node0x29a4e30 [shape=record,label="{%36:\l\l  %37 = load i32, i32* %5, align 4\l  %38 = trunc i32 %37 to i8\l  store i8 %38, i8* %4, align 1\l  br label %49\l}"];
+	Node0x29a4e30 -> Node0x29a5d60;
+	Node0x29a57e0 [shape=record,label="{%39:\l\l  %40 = load i32, i32* %10, align 4\l  %41 = load i32, i32* %11, align 4\l  %42 = icmp sle i32 %40, %41\l  br i1 %42, label %43, label %46\l|{<s0>T|<s1>F}}"];
+	Node0x29a57e0:s0 -> Node0x29a5f50;
+	Node0x29a57e0:s1 -> Node0x29a5fa0;
+	Node0x29a5f50 [shape=record,label="{%43:\l\l  %44 = load i32, i32* %6, align 4\l  %45 = trunc i32 %44 to i8\l  store i8 %45, i8* %4, align 1\l  br label %49\l}"];
+	Node0x29a5f50 -> Node0x29a5d60;
+	Node0x29a5fa0 [shape=record,label="{%46:\l\l  %47 = load i32, i32* %7, align 4\l  %48 = trunc i32 %47 to i8\l  store i8 %48, i8* %4, align 1\l  br label %49\l}"];
+	Node0x29a5fa0 -> Node0x29a5d60;
+	Node0x29a5d60 [shape=record,label="{%49:\l\l  %50 = load i8, i8* %4, align 1\l  ret i8 %50\l}"];
+}

@@ -1,0 +1,24 @@
+digraph "CFG for 'stbi__zlib_countm' function" {
+	label="CFG for 'stbi__zlib_countm' function";
+
+	Node0x298b830 [shape=record,label="{%3:\l  %4 = alloca i8*, align 8\l  %5 = alloca i8*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i8* %0, i8** %4, align 8\l  store i8* %1, i8** %5, align 8\l  store i32 %2, i32* %6, align 4\l  store i32 0, i32* %7, align 4\l  br label %8\l}"];
+	Node0x298b830 -> Node0x298c350;
+	Node0x298c350 [shape=record,label="{%8:\l\l  %9 = load i32, i32* %7, align 4\l  %10 = load i32, i32* %6, align 4\l  %11 = icmp slt i32 %9, %10\l  br i1 %11, label %12, label %15\l|{<s0>T|<s1>F}}"];
+	Node0x298c350:s0 -> Node0x298bfb0;
+	Node0x298c350:s1 -> Node0x298c570;
+	Node0x298bfb0 [shape=record,label="{%12:\l\l  %13 = load i32, i32* %7, align 4\l  %14 = icmp slt i32 %13, 258\l  br label %15\l}"];
+	Node0x298bfb0 -> Node0x298c570;
+	Node0x298c570 [shape=record,label="{%15:\l\l  %16 = phi i1 [ false, %8 ], [ %14, %12 ]\l  br i1 %16, label %17, label %36\l|{<s0>T|<s1>F}}"];
+	Node0x298c570:s0 -> Node0x298c3a0;
+	Node0x298c570:s1 -> Node0x298c990;
+	Node0x298c3a0 [shape=record,label="{%17:\l\l  %18 = load i32, i32* %7, align 4\l  %19 = sext i32 %18 to i64\l  %20 = load i8*, i8** %4, align 8\l  %21 = getelementptr inbounds i8, i8* %20, i64 %19\l  %22 = load i8, i8* %21, align 1\l  %23 = zext i8 %22 to i32\l  %24 = load i32, i32* %7, align 4\l  %25 = sext i32 %24 to i64\l  %26 = load i8*, i8** %5, align 8\l  %27 = getelementptr inbounds i8, i8* %26, i64 %25\l  %28 = load i8, i8* %27, align 1\l  %29 = zext i8 %28 to i32\l  %30 = icmp ne i32 %23, %29\l  br i1 %30, label %31, label %32\l|{<s0>T|<s1>F}}"];
+	Node0x298c3a0:s0 -> Node0x298cfd0;
+	Node0x298c3a0:s1 -> Node0x298d020;
+	Node0x298cfd0 [shape=record,label="{%31:\l\l  br label %36\l}"];
+	Node0x298cfd0 -> Node0x298c990;
+	Node0x298d020 [shape=record,label="{%32:\l\l  br label %33\l}"];
+	Node0x298d020 -> Node0x298c880;
+	Node0x298c880 [shape=record,label="{%33:\l\l  %34 = load i32, i32* %7, align 4\l  %35 = add nsw i32 %34, 1\l  store i32 %35, i32* %7, align 4\l  br label %8\l}"];
+	Node0x298c880 -> Node0x298c350;
+	Node0x298c990 [shape=record,label="{%36:\l\l  %37 = load i32, i32* %7, align 4\l  ret i32 %37\l}"];
+}

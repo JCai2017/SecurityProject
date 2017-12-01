@@ -1,0 +1,20 @@
+digraph "CFG for 'stbtt_GetFontVMetrics' function" {
+	label="CFG for 'stbtt_GetFontVMetrics' function";
+
+	Node0x2a0d7e0 [shape=record,label="{%4:\l  %5 = alloca %struct.stbtt_fontinfo*, align 8\l  %6 = alloca i32*, align 8\l  %7 = alloca i32*, align 8\l  %8 = alloca i32*, align 8\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %5, align 8\l  store i32* %1, i32** %6, align 8\l  store i32* %2, i32** %7, align 8\l  store i32* %3, i32** %8, align 8\l  %9 = load i32*, i32** %6, align 8\l  %10 = icmp ne i32* %9, null\l  br i1 %10, label %11, label %24\l|{<s0>T|<s1>F}}"];
+	Node0x2a0d7e0:s0 -> Node0x2a0d870;
+	Node0x2a0d7e0:s1 -> Node0x2a0ddf0;
+	Node0x2a0d870 [shape=record,label="{%11:\l\l  %12 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %13 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %12, i32 0, i32 1\l  %14 = load i8*, i8** %13, align 8\l  %15 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %16 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %15, i32 0, i32 7\l  %17 = load i32, i32* %16, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr inbounds i8, i8* %14, i64 %18\l  %20 = getelementptr inbounds i8, i8* %19, i64 4\l  %21 = call signext i16 @ttSHORT(i8* %20)\l  %22 = sext i16 %21 to i32\l  %23 = load i32*, i32** %6, align 8\l  store i32 %22, i32* %23, align 4\l  br label %24\l}"];
+	Node0x2a0d870 -> Node0x2a0ddf0;
+	Node0x2a0ddf0 [shape=record,label="{%24:\l\l  %25 = load i32*, i32** %7, align 8\l  %26 = icmp ne i32* %25, null\l  br i1 %26, label %27, label %40\l|{<s0>T|<s1>F}}"];
+	Node0x2a0ddf0:s0 -> Node0x2a0e760;
+	Node0x2a0ddf0:s1 -> Node0x2a0e7b0;
+	Node0x2a0e760 [shape=record,label="{%27:\l\l  %28 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %29 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %28, i32 0, i32 1\l  %30 = load i8*, i8** %29, align 8\l  %31 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %32 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %31, i32 0, i32 7\l  %33 = load i32, i32* %32, align 4\l  %34 = sext i32 %33 to i64\l  %35 = getelementptr inbounds i8, i8* %30, i64 %34\l  %36 = getelementptr inbounds i8, i8* %35, i64 6\l  %37 = call signext i16 @ttSHORT(i8* %36)\l  %38 = sext i16 %37 to i32\l  %39 = load i32*, i32** %7, align 8\l  store i32 %38, i32* %39, align 4\l  br label %40\l}"];
+	Node0x2a0e760 -> Node0x2a0e7b0;
+	Node0x2a0e7b0 [shape=record,label="{%40:\l\l  %41 = load i32*, i32** %8, align 8\l  %42 = icmp ne i32* %41, null\l  br i1 %42, label %43, label %56\l|{<s0>T|<s1>F}}"];
+	Node0x2a0e7b0:s0 -> Node0x2a0f130;
+	Node0x2a0e7b0:s1 -> Node0x2a0f180;
+	Node0x2a0f130 [shape=record,label="{%43:\l\l  %44 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %45 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %44, i32 0, i32 1\l  %46 = load i8*, i8** %45, align 8\l  %47 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %48 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %47, i32 0, i32 7\l  %49 = load i32, i32* %48, align 4\l  %50 = sext i32 %49 to i64\l  %51 = getelementptr inbounds i8, i8* %46, i64 %50\l  %52 = getelementptr inbounds i8, i8* %51, i64 8\l  %53 = call signext i16 @ttSHORT(i8* %52)\l  %54 = sext i16 %53 to i32\l  %55 = load i32*, i32** %8, align 8\l  store i32 %54, i32* %55, align 4\l  br label %56\l}"];
+	Node0x2a0f130 -> Node0x2a0f180;
+	Node0x2a0f180 [shape=record,label="{%56:\l\l  ret void\l}"];
+}

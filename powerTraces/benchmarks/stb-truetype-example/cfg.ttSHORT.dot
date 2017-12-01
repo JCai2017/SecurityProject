@@ -1,0 +1,5 @@
+digraph "CFG for 'ttSHORT' function" {
+	label="CFG for 'ttSHORT' function";
+
+	Node0x29afd80 [shape=record,label="{%1:\l  %2 = alloca i8*, align 8\l  store i8* %0, i8** %2, align 8\l  %3 = load i8*, i8** %2, align 8\l  %4 = getelementptr inbounds i8, i8* %3, i64 0\l  %5 = load i8, i8* %4, align 1\l  %6 = zext i8 %5 to i32\l  %7 = mul nsw i32 %6, 256\l  %8 = load i8*, i8** %2, align 8\l  %9 = getelementptr inbounds i8, i8* %8, i64 1\l  %10 = load i8, i8* %9, align 1\l  %11 = zext i8 %10 to i32\l  %12 = add nsw i32 %7, %11\l  %13 = trunc i32 %12 to i16\l  ret i16 %13\l}"];
+}

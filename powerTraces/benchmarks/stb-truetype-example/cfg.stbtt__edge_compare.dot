@@ -1,0 +1,17 @@
+digraph "CFG for 'stbtt__edge_compare' function" {
+	label="CFG for 'stbtt__edge_compare' function";
+
+	Node0x2a782b0 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca i8*, align 8\l  %5 = alloca i8*, align 8\l  %6 = alloca %struct.stbtt__edge*, align 8\l  %7 = alloca %struct.stbtt__edge*, align 8\l  store i8* %0, i8** %4, align 8\l  store i8* %1, i8** %5, align 8\l  %8 = load i8*, i8** %4, align 8\l  %9 = bitcast i8* %8 to %struct.stbtt__edge*\l  store %struct.stbtt__edge* %9, %struct.stbtt__edge** %6, align 8\l  %10 = load i8*, i8** %5, align 8\l  %11 = bitcast i8* %10 to %struct.stbtt__edge*\l  store %struct.stbtt__edge* %11, %struct.stbtt__edge** %7, align 8\l  %12 = load %struct.stbtt__edge*, %struct.stbtt__edge** %6, align 8\l  %13 = getelementptr inbounds %struct.stbtt__edge, %struct.stbtt__edge* %12,\l... i32 0, i32 1\l  %14 = load float, float* %13, align 4\l  %15 = load %struct.stbtt__edge*, %struct.stbtt__edge** %7, align 8\l  %16 = getelementptr inbounds %struct.stbtt__edge, %struct.stbtt__edge* %15,\l... i32 0, i32 1\l  %17 = load float, float* %16, align 4\l  %18 = fcmp olt float %14, %17\l  br i1 %18, label %19, label %20\l|{<s0>T|<s1>F}}"];
+	Node0x2a782b0:s0 -> Node0x2a78420;
+	Node0x2a782b0:s1 -> Node0x2a78ca0;
+	Node0x2a78420 [shape=record,label="{%19:\l\l  store i32 -1, i32* %3, align 4\l  br label %30\l}"];
+	Node0x2a78420 -> Node0x2a78e40;
+	Node0x2a78ca0 [shape=record,label="{%20:\l\l  %21 = load %struct.stbtt__edge*, %struct.stbtt__edge** %6, align 8\l  %22 = getelementptr inbounds %struct.stbtt__edge, %struct.stbtt__edge* %21,\l... i32 0, i32 1\l  %23 = load float, float* %22, align 4\l  %24 = load %struct.stbtt__edge*, %struct.stbtt__edge** %7, align 8\l  %25 = getelementptr inbounds %struct.stbtt__edge, %struct.stbtt__edge* %24,\l... i32 0, i32 1\l  %26 = load float, float* %25, align 4\l  %27 = fcmp ogt float %23, %26\l  br i1 %27, label %28, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x2a78ca0:s0 -> Node0x2a79230;
+	Node0x2a78ca0:s1 -> Node0x2a79280;
+	Node0x2a79230 [shape=record,label="{%28:\l\l  store i32 1, i32* %3, align 4\l  br label %30\l}"];
+	Node0x2a79230 -> Node0x2a78e40;
+	Node0x2a79280 [shape=record,label="{%29:\l\l  store i32 0, i32* %3, align 4\l  br label %30\l}"];
+	Node0x2a79280 -> Node0x2a78e40;
+	Node0x2a78e40 [shape=record,label="{%30:\l\l  %31 = load i32, i32* %3, align 4\l  ret i32 %31\l}"];
+}

@@ -1,0 +1,12 @@
+digraph "CFG for 'stbtt_IsGlyphEmpty' function" {
+	label="CFG for 'stbtt_IsGlyphEmpty' function";
+
+	Node0x29feff0 [shape=record,label="{%2:\l  %3 = alloca i32, align 4\l  %4 = alloca %struct.stbtt_fontinfo*, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca i16, align 2\l  %7 = alloca i32, align 4\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %4, align 8\l  store i32 %1, i32* %5, align 4\l  %8 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %4, align 8\l  %9 = load i32, i32* %5, align 4\l  %10 = call i32 @stbtt__GetGlyfOffset(%struct.stbtt_fontinfo* %8, i32 %9)\l  store i32 %10, i32* %7, align 4\l  %11 = load i32, i32* %7, align 4\l  %12 = icmp slt i32 %11, 0\l  br i1 %12, label %13, label %14\l|{<s0>T|<s1>F}}"];
+	Node0x29feff0:s0 -> Node0x29ff750;
+	Node0x29feff0:s1 -> Node0x29ff7a0;
+	Node0x29ff750 [shape=record,label="{%13:\l\l  store i32 1, i32* %3, align 4\l  br label %26\l}"];
+	Node0x29ff750 -> Node0x29ff940;
+	Node0x29ff7a0 [shape=record,label="{%14:\l\l  %15 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %4, align 8\l  %16 = getelementptr inbounds %struct.stbtt_fontinfo, %struct.stbtt_fontinfo*\l... %15, i32 0, i32 1\l  %17 = load i8*, i8** %16, align 8\l  %18 = load i32, i32* %7, align 4\l  %19 = sext i32 %18 to i64\l  %20 = getelementptr inbounds i8, i8* %17, i64 %19\l  %21 = call signext i16 @ttSHORT(i8* %20)\l  store i16 %21, i16* %6, align 2\l  %22 = load i16, i16* %6, align 2\l  %23 = sext i16 %22 to i32\l  %24 = icmp eq i32 %23, 0\l  %25 = zext i1 %24 to i32\l  store i32 %25, i32* %3, align 4\l  br label %26\l}"];
+	Node0x29ff7a0 -> Node0x29ff940;
+	Node0x29ff940 [shape=record,label="{%26:\l\l  %27 = load i32, i32* %3, align 4\l  ret i32 %27\l}"];
+}

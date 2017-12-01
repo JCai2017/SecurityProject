@@ -1,0 +1,30 @@
+digraph "CFG for 'stbtt__find_table' function" {
+	label="CFG for 'stbtt__find_table' function";
+
+	Node0x29bf0b0 [shape=record,label="{%3:\l  %4 = alloca i32, align 4\l  %5 = alloca i8*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i8*, align 8\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca i32, align 4\l  store i8* %0, i8** %5, align 8\l  store i32 %1, i32* %6, align 4\l  store i8* %2, i8** %7, align 8\l  %12 = load i8*, i8** %5, align 8\l  %13 = load i32, i32* %6, align 4\l  %14 = zext i32 %13 to i64\l  %15 = getelementptr inbounds i8, i8* %12, i64 %14\l  %16 = getelementptr inbounds i8, i8* %15, i64 4\l  %17 = call zeroext i16 @ttUSHORT(i8* %16)\l  %18 = zext i16 %17 to i32\l  store i32 %18, i32* %8, align 4\l  %19 = load i32, i32* %6, align 4\l  %20 = add i32 %19, 12\l  store i32 %20, i32* %9, align 4\l  store i32 0, i32* %10, align 4\l  br label %21\l}"];
+	Node0x29bf0b0 -> Node0x29c11d0;
+	Node0x29c11d0 [shape=record,label="{%21:\l\l  %22 = load i32, i32* %10, align 4\l  %23 = load i32, i32* %8, align 4\l  %24 = icmp slt i32 %22, %23\l  br i1 %24, label %25, label %96\l|{<s0>T|<s1>F}}"];
+	Node0x29c11d0:s0 -> Node0x29c13c0;
+	Node0x29c11d0:s1 -> Node0x29c1410;
+	Node0x29c13c0 [shape=record,label="{%25:\l\l  %26 = load i32, i32* %9, align 4\l  %27 = load i32, i32* %10, align 4\l  %28 = mul nsw i32 16, %27\l  %29 = add i32 %26, %28\l  store i32 %29, i32* %11, align 4\l  %30 = load i8*, i8** %5, align 8\l  %31 = load i32, i32* %11, align 4\l  %32 = zext i32 %31 to i64\l  %33 = getelementptr inbounds i8, i8* %30, i64 %32\l  %34 = getelementptr inbounds i8, i8* %33, i64 0\l  %35 = getelementptr inbounds i8, i8* %34, i64 0\l  %36 = load i8, i8* %35, align 1\l  %37 = zext i8 %36 to i32\l  %38 = load i8*, i8** %7, align 8\l  %39 = getelementptr inbounds i8, i8* %38, i64 0\l  %40 = load i8, i8* %39, align 1\l  %41 = sext i8 %40 to i32\l  %42 = icmp eq i32 %37, %41\l  br i1 %42, label %43, label %92\l|{<s0>T|<s1>F}}"];
+	Node0x29c13c0:s0 -> Node0x29c1e50;
+	Node0x29c13c0:s1 -> Node0x29c1ea0;
+	Node0x29c1e50 [shape=record,label="{%43:\l\l  %44 = load i8*, i8** %5, align 8\l  %45 = load i32, i32* %11, align 4\l  %46 = zext i32 %45 to i64\l  %47 = getelementptr inbounds i8, i8* %44, i64 %46\l  %48 = getelementptr inbounds i8, i8* %47, i64 0\l  %49 = getelementptr inbounds i8, i8* %48, i64 1\l  %50 = load i8, i8* %49, align 1\l  %51 = zext i8 %50 to i32\l  %52 = load i8*, i8** %7, align 8\l  %53 = getelementptr inbounds i8, i8* %52, i64 1\l  %54 = load i8, i8* %53, align 1\l  %55 = sext i8 %54 to i32\l  %56 = icmp eq i32 %51, %55\l  br i1 %56, label %57, label %92\l|{<s0>T|<s1>F}}"];
+	Node0x29c1e50:s0 -> Node0x29c2520;
+	Node0x29c1e50:s1 -> Node0x29c1ea0;
+	Node0x29c2520 [shape=record,label="{%57:\l\l  %58 = load i8*, i8** %5, align 8\l  %59 = load i32, i32* %11, align 4\l  %60 = zext i32 %59 to i64\l  %61 = getelementptr inbounds i8, i8* %58, i64 %60\l  %62 = getelementptr inbounds i8, i8* %61, i64 0\l  %63 = getelementptr inbounds i8, i8* %62, i64 2\l  %64 = load i8, i8* %63, align 1\l  %65 = zext i8 %64 to i32\l  %66 = load i8*, i8** %7, align 8\l  %67 = getelementptr inbounds i8, i8* %66, i64 2\l  %68 = load i8, i8* %67, align 1\l  %69 = sext i8 %68 to i32\l  %70 = icmp eq i32 %65, %69\l  br i1 %70, label %71, label %92\l|{<s0>T|<s1>F}}"];
+	Node0x29c2520:s0 -> Node0x29c2dc0;
+	Node0x29c2520:s1 -> Node0x29c1ea0;
+	Node0x29c2dc0 [shape=record,label="{%71:\l\l  %72 = load i8*, i8** %5, align 8\l  %73 = load i32, i32* %11, align 4\l  %74 = zext i32 %73 to i64\l  %75 = getelementptr inbounds i8, i8* %72, i64 %74\l  %76 = getelementptr inbounds i8, i8* %75, i64 0\l  %77 = getelementptr inbounds i8, i8* %76, i64 3\l  %78 = load i8, i8* %77, align 1\l  %79 = zext i8 %78 to i32\l  %80 = load i8*, i8** %7, align 8\l  %81 = getelementptr inbounds i8, i8* %80, i64 3\l  %82 = load i8, i8* %81, align 1\l  %83 = sext i8 %82 to i32\l  %84 = icmp eq i32 %79, %83\l  br i1 %84, label %85, label %92\l|{<s0>T|<s1>F}}"];
+	Node0x29c2dc0:s0 -> Node0x29c3460;
+	Node0x29c2dc0:s1 -> Node0x29c1ea0;
+	Node0x29c3460 [shape=record,label="{%85:\l\l  %86 = load i8*, i8** %5, align 8\l  %87 = load i32, i32* %11, align 4\l  %88 = zext i32 %87 to i64\l  %89 = getelementptr inbounds i8, i8* %86, i64 %88\l  %90 = getelementptr inbounds i8, i8* %89, i64 8\l  %91 = call i32 @ttULONG(i8* %90)\l  store i32 %91, i32* %4, align 4\l  br label %97\l}"];
+	Node0x29c3460 -> Node0x29c38e0;
+	Node0x29c1ea0 [shape=record,label="{%92:\l\l  br label %93\l}"];
+	Node0x29c1ea0 -> Node0x29c3990;
+	Node0x29c3990 [shape=record,label="{%93:\l\l  %94 = load i32, i32* %10, align 4\l  %95 = add nsw i32 %94, 1\l  store i32 %95, i32* %10, align 4\l  br label %21\l}"];
+	Node0x29c3990 -> Node0x29c11d0;
+	Node0x29c1410 [shape=record,label="{%96:\l\l  store i32 0, i32* %4, align 4\l  br label %97\l}"];
+	Node0x29c1410 -> Node0x29c38e0;
+	Node0x29c38e0 [shape=record,label="{%97:\l\l  %98 = load i32, i32* %4, align 4\l  ret i32 %98\l}"];
+}

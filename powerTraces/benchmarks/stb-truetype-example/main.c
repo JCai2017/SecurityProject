@@ -31,7 +31,7 @@ int main(int argc, const char * argv[])
         printf("failed\n");
     }
     
-    int b_w = 512; /* bitmap width */
+    int b_w = 512 * 4; /* bitmap width */
     int b_h = 128; /* bitmap height */
     int l_h = 64; /* line height */
 
@@ -41,7 +41,7 @@ int main(int argc, const char * argv[])
     /* calculate font scaling */
     float scale = stbtt_ScaleForPixelHeight(&info, l_h);
 
-    char* word = "find out my secret";// "how are you?";
+    char* word = "AAAA    AAAA    AAAA    AAAB    AAAB    AAAB";// "how are you?";
     
     int x = 0;
        

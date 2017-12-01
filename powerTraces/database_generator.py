@@ -37,7 +37,7 @@ for op in opList:
 				f.write("  }\n\n") # end for loop
 				f.write("  return 0;\n\n}\n") 
 				f.close()
-				counter += 1
 			with open("database/database.h", "a+") as f:
 				resstring = "result = " + var + " " + op + " " + con
 				f.write("#define DATAPOINT" + str(counter) + " " + "" + resstring + "\n")
+			counter += 1

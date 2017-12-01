@@ -1,0 +1,17 @@
+digraph "CFG for 'stbi_write_png' function" {
+	label="CFG for 'stbi_write_png' function";
+
+	Node0x29ad4c0 [shape=record,label="{%6:\l  %7 = alloca i32, align 4\l  %8 = alloca i8*, align 8\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca i32, align 4\l  %12 = alloca i8*, align 8\l  %13 = alloca i32, align 4\l  %14 = alloca %struct._IO_FILE*, align 8\l  %15 = alloca i32, align 4\l  %16 = alloca i8*, align 8\l  store i8* %0, i8** %8, align 8\l  store i32 %1, i32* %9, align 4\l  store i32 %2, i32* %10, align 4\l  store i32 %3, i32* %11, align 4\l  store i8* %4, i8** %12, align 8\l  store i32 %5, i32* %13, align 4\l  %17 = load i8*, i8** %12, align 8\l  %18 = load i32, i32* %13, align 4\l  %19 = load i32, i32* %9, align 4\l  %20 = load i32, i32* %10, align 4\l  %21 = load i32, i32* %11, align 4\l  %22 = call i8* @stbi_write_png_to_mem(i8* %17, i32 %18, i32 %19, i32 %20,\l... i32 %21, i32* %15)\l  store i8* %22, i8** %16, align 8\l  %23 = load i8*, i8** %16, align 8\l  %24 = icmp ne i8* %23, null\l  br i1 %24, label %26, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x29ad4c0:s0 -> Node0x29ae240;
+	Node0x29ad4c0:s1 -> Node0x29ae290;
+	Node0x29ae290 [shape=record,label="{%25:\l\l  store i32 0, i32* %7, align 4\l  br label %42\l}"];
+	Node0x29ae290 -> Node0x29ae430;
+	Node0x29ae240 [shape=record,label="{%26:\l\l  %27 = load i8*, i8** %8, align 8\l  %28 = call %struct._IO_FILE* @fopen(i8* %27, i8* getelementptr inbounds ([3\l... x i8], [3 x i8]* @.str.8, i32 0, i32 0))\l  store %struct._IO_FILE* %28, %struct._IO_FILE** %14, align 8\l  %29 = load %struct._IO_FILE*, %struct._IO_FILE** %14, align 8\l  %30 = icmp ne %struct._IO_FILE* %29, null\l  br i1 %30, label %33, label %31\l|{<s0>T|<s1>F}}"];
+	Node0x29ae240:s0 -> Node0x29ae790;
+	Node0x29ae240:s1 -> Node0x29ae7e0;
+	Node0x29ae7e0 [shape=record,label="{%31:\l\l  %32 = load i8*, i8** %16, align 8\l  call void @free(i8* %32) #7\l  store i32 0, i32* %7, align 4\l  br label %42\l}"];
+	Node0x29ae7e0 -> Node0x29ae430;
+	Node0x29ae790 [shape=record,label="{%33:\l\l  %34 = load i8*, i8** %16, align 8\l  %35 = load i32, i32* %15, align 4\l  %36 = sext i32 %35 to i64\l  %37 = load %struct._IO_FILE*, %struct._IO_FILE** %14, align 8\l  %38 = call i64 @fwrite(i8* %34, i64 1, i64 %36, %struct._IO_FILE* %37)\l  %39 = load %struct._IO_FILE*, %struct._IO_FILE** %14, align 8\l  %40 = call i32 @fclose(%struct._IO_FILE* %39)\l  %41 = load i8*, i8** %16, align 8\l  call void @free(i8* %41) #7\l  store i32 1, i32* %7, align 4\l  br label %42\l}"];
+	Node0x29ae790 -> Node0x29ae430;
+	Node0x29ae430 [shape=record,label="{%42:\l\l  %43 = load i32, i32* %7, align 4\l  ret i32 %43\l}"];
+}

@@ -1,0 +1,48 @@
+digraph "CFG for 'writefv' function" {
+	label="CFG for 'writefv' function";
+
+	Node0x2a6b460 [shape=record,label="{%3:\l  %4 = alloca %struct._IO_FILE*, align 8\l  %5 = alloca i8*, align 8\l  %6 = alloca %struct.__va_list_tag*, align 8\l  %7 = alloca i8, align 1\l  %8 = alloca i32, align 4\l  %9 = alloca [2 x i8], align 1\l  %10 = alloca i32, align 4\l  %11 = alloca [4 x i8], align 1\l  store %struct._IO_FILE* %0, %struct._IO_FILE** %4, align 8\l  store i8* %1, i8** %5, align 8\l  store %struct.__va_list_tag* %2, %struct.__va_list_tag** %6, align 8\l  br label %12\l}"];
+	Node0x2a6b460 -> Node0x2a6b560;
+	Node0x2a6b560 [shape=record,label="{%12:\l\l  %13 = load i8*, i8** %5, align 8\l  %14 = load i8, i8* %13, align 1\l  %15 = icmp ne i8 %14, 0\l  br i1 %15, label %16, label %114\l|{<s0>T|<s1>F}}"];
+	Node0x2a6b560:s0 -> Node0x2a6c8c0;
+	Node0x2a6b560:s1 -> Node0x2a6c910;
+	Node0x2a6c8c0 [shape=record,label="{%16:\l\l  %17 = load i8*, i8** %5, align 8\l  %18 = getelementptr inbounds i8, i8* %17, i32 1\l  store i8* %18, i8** %5, align 8\l  %19 = load i8, i8* %17, align 1\l  %20 = sext i8 %19 to i32\l  switch i32 %20, label %112 [\l    i32 32, label %21\l    i32 49, label %22\l    i32 50, label %46\l    i32 52, label %75\l  ]\l|{<s0>def|<s1>32|<s2>49|<s3>50|<s4>52}}"];
+	Node0x2a6c8c0:s0 -> Node0x2a6cbc0;
+	Node0x2a6c8c0:s1 -> Node0x2a6cc10;
+	Node0x2a6c8c0:s2 -> Node0x2a6cca0;
+	Node0x2a6c8c0:s3 -> Node0x2a6cd70;
+	Node0x2a6c8c0:s4 -> Node0x2a6ce40;
+	Node0x2a6cc10 [shape=record,label="{%21:\l\l  br label %113\l}"];
+	Node0x2a6cc10 -> Node0x2a6cfd0;
+	Node0x2a6cca0 [shape=record,label="{%22:\l\l  %23 = load %struct.__va_list_tag*, %struct.__va_list_tag** %6, align 8\l  %24 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %23, i32 0, i32 0\l  %25 = load i32, i32* %24, align 8\l  %26 = icmp ule i32 %25, 40\l  br i1 %26, label %27, label %33\l|{<s0>T|<s1>F}}"];
+	Node0x2a6cca0:s0 -> Node0x2a6d260;
+	Node0x2a6cca0:s1 -> Node0x2a6d2b0;
+	Node0x2a6d260 [shape=record,label="{%27:\l\l  %28 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %23, i32 0, i32 3\l  %29 = load i8*, i8** %28, align 8\l  %30 = getelementptr i8, i8* %29, i32 %25\l  %31 = bitcast i8* %30 to i32*\l  %32 = add i32 %25, 8\l  store i32 %32, i32* %24, align 8\l  br label %38\l}"];
+	Node0x2a6d260 -> Node0x2a6cab0;
+	Node0x2a6d2b0 [shape=record,label="{%33:\l\l  %34 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %23, i32 0, i32 2\l  %35 = load i8*, i8** %34, align 8\l  %36 = bitcast i8* %35 to i32*\l  %37 = getelementptr i8, i8* %35, i32 8\l  store i8* %37, i8** %34, align 8\l  br label %38\l}"];
+	Node0x2a6d2b0 -> Node0x2a6cab0;
+	Node0x2a6cab0 [shape=record,label="{%38:\l\l  %39 = phi i32* [ %31, %27 ], [ %36, %33 ]\l  %40 = load i32, i32* %39, align 4\l  %41 = trunc i32 %40 to i8\l  store i8 %41, i8* %7, align 1\l  %42 = load i8, i8* %7, align 1\l  %43 = zext i8 %42 to i32\l  %44 = load %struct._IO_FILE*, %struct._IO_FILE** %4, align 8\l  %45 = call i32 @fputc(i32 %43, %struct._IO_FILE* %44)\l  br label %113\l}"];
+	Node0x2a6cab0 -> Node0x2a6cfd0;
+	Node0x2a6cd70 [shape=record,label="{%46:\l\l  %47 = load %struct.__va_list_tag*, %struct.__va_list_tag** %6, align 8\l  %48 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %47, i32 0, i32 0\l  %49 = load i32, i32* %48, align 8\l  %50 = icmp ule i32 %49, 40\l  br i1 %50, label %51, label %57\l|{<s0>T|<s1>F}}"];
+	Node0x2a6cd70:s0 -> Node0x2a6e2d0;
+	Node0x2a6cd70:s1 -> Node0x2a6e320;
+	Node0x2a6e2d0 [shape=record,label="{%51:\l\l  %52 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %47, i32 0, i32 3\l  %53 = load i8*, i8** %52, align 8\l  %54 = getelementptr i8, i8* %53, i32 %49\l  %55 = bitcast i8* %54 to i32*\l  %56 = add i32 %49, 8\l  store i32 %56, i32* %48, align 8\l  br label %62\l}"];
+	Node0x2a6e2d0 -> Node0x2a6e6f0;
+	Node0x2a6e320 [shape=record,label="{%57:\l\l  %58 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %47, i32 0, i32 2\l  %59 = load i8*, i8** %58, align 8\l  %60 = bitcast i8* %59 to i32*\l  %61 = getelementptr i8, i8* %59, i32 8\l  store i8* %61, i8** %58, align 8\l  br label %62\l}"];
+	Node0x2a6e320 -> Node0x2a6e6f0;
+	Node0x2a6e6f0 [shape=record,label="{%62:\l\l  %63 = phi i32* [ %55, %51 ], [ %60, %57 ]\l  %64 = load i32, i32* %63, align 4\l  store i32 %64, i32* %8, align 4\l  %65 = load i32, i32* %8, align 4\l  %66 = trunc i32 %65 to i8\l  %67 = getelementptr inbounds [2 x i8], [2 x i8]* %9, i64 0, i64 0\l  store i8 %66, i8* %67, align 1\l  %68 = load i32, i32* %8, align 4\l  %69 = ashr i32 %68, 8\l  %70 = trunc i32 %69 to i8\l  %71 = getelementptr inbounds [2 x i8], [2 x i8]* %9, i64 0, i64 1\l  store i8 %70, i8* %71, align 1\l  %72 = getelementptr inbounds [2 x i8], [2 x i8]* %9, i32 0, i32 0\l  %73 = load %struct._IO_FILE*, %struct._IO_FILE** %4, align 8\l  %74 = call i64 @fwrite(i8* %72, i64 2, i64 1, %struct._IO_FILE* %73)\l  br label %113\l}"];
+	Node0x2a6e6f0 -> Node0x2a6cfd0;
+	Node0x2a6ce40 [shape=record,label="{%75:\l\l  %76 = load %struct.__va_list_tag*, %struct.__va_list_tag** %6, align 8\l  %77 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %76, i32 0, i32 0\l  %78 = load i32, i32* %77, align 8\l  %79 = icmp ule i32 %78, 40\l  br i1 %79, label %80, label %86\l|{<s0>T|<s1>F}}"];
+	Node0x2a6ce40:s0 -> Node0x2a6f6d0;
+	Node0x2a6ce40:s1 -> Node0x2a6f720;
+	Node0x2a6f6d0 [shape=record,label="{%80:\l\l  %81 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %76, i32 0, i32 3\l  %82 = load i8*, i8** %81, align 8\l  %83 = getelementptr i8, i8* %82, i32 %78\l  %84 = bitcast i8* %83 to i32*\l  %85 = add i32 %78, 8\l  store i32 %85, i32* %77, align 8\l  br label %91\l}"];
+	Node0x2a6f6d0 -> Node0x2a6faf0;
+	Node0x2a6f720 [shape=record,label="{%86:\l\l  %87 = getelementptr inbounds %struct.__va_list_tag, %struct.__va_list_tag*\l... %76, i32 0, i32 2\l  %88 = load i8*, i8** %87, align 8\l  %89 = bitcast i8* %88 to i32*\l  %90 = getelementptr i8, i8* %88, i32 8\l  store i8* %90, i8** %87, align 8\l  br label %91\l}"];
+	Node0x2a6f720 -> Node0x2a6faf0;
+	Node0x2a6faf0 [shape=record,label="{%91:\l\l  %92 = phi i32* [ %84, %80 ], [ %89, %86 ]\l  %93 = load i32, i32* %92, align 4\l  store i32 %93, i32* %10, align 4\l  %94 = load i32, i32* %10, align 4\l  %95 = trunc i32 %94 to i8\l  %96 = getelementptr inbounds [4 x i8], [4 x i8]* %11, i64 0, i64 0\l  store i8 %95, i8* %96, align 1\l  %97 = load i32, i32* %10, align 4\l  %98 = lshr i32 %97, 8\l  %99 = trunc i32 %98 to i8\l  %100 = getelementptr inbounds [4 x i8], [4 x i8]* %11, i64 0, i64 1\l  store i8 %99, i8* %100, align 1\l  %101 = load i32, i32* %10, align 4\l  %102 = lshr i32 %101, 16\l  %103 = trunc i32 %102 to i8\l  %104 = getelementptr inbounds [4 x i8], [4 x i8]* %11, i64 0, i64 2\l  store i8 %103, i8* %104, align 1\l  %105 = load i32, i32* %10, align 4\l  %106 = lshr i32 %105, 24\l  %107 = trunc i32 %106 to i8\l  %108 = getelementptr inbounds [4 x i8], [4 x i8]* %11, i64 0, i64 3\l  store i8 %107, i8* %108, align 1\l  %109 = getelementptr inbounds [4 x i8], [4 x i8]* %11, i32 0, i32 0\l  %110 = load %struct._IO_FILE*, %struct._IO_FILE** %4, align 8\l  %111 = call i64 @fwrite(i8* %109, i64 4, i64 1, %struct._IO_FILE* %110)\l  br label %113\l}"];
+	Node0x2a6faf0 -> Node0x2a6cfd0;
+	Node0x2a6cbc0 [shape=record,label="{%112:\l\l  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]*\l... @.str.18, i32 0, i32 0), i8* getelementptr inbounds ([20 x i8], [20 x i8]*\l... @.str.3, i32 0, i32 0), i32 96, i8* getelementptr inbounds ([59 x i8], [59 x\l... i8]* @__PRETTY_FUNCTION__.writefv, i32 0, i32 0)) #8\l  unreachable\l}"];
+	Node0x2a6cfd0 [shape=record,label="{%113:\l\l  br label %12\l}"];
+	Node0x2a6cfd0 -> Node0x2a6b560;
+	Node0x2a6c910 [shape=record,label="{%114:\l\l  ret void\l}"];
+}

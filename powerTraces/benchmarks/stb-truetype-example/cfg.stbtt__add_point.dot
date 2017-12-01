@@ -1,0 +1,12 @@
+digraph "CFG for 'stbtt__add_point' function" {
+	label="CFG for 'stbtt__add_point' function";
+
+	Node0x2a21690 [shape=record,label="{%4:\l  %5 = alloca %struct.stbtt__point*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca float, align 4\l  %8 = alloca float, align 4\l  store %struct.stbtt__point* %0, %struct.stbtt__point** %5, align 8\l  store i32 %1, i32* %6, align 4\l  store float %2, float* %7, align 4\l  store float %3, float* %8, align 4\l  %9 = load %struct.stbtt__point*, %struct.stbtt__point** %5, align 8\l  %10 = icmp ne %struct.stbtt__point* %9, null\l  br i1 %10, label %12, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x2a21690:s0 -> Node0x2a216e0;
+	Node0x2a21690:s1 -> Node0x2a21c00;
+	Node0x2a21c00 [shape=record,label="{%11:\l\l  br label %25\l}"];
+	Node0x2a21c00 -> Node0x2a21ce0;
+	Node0x2a216e0 [shape=record,label="{%12:\l\l  %13 = load float, float* %7, align 4\l  %14 = load i32, i32* %6, align 4\l  %15 = sext i32 %14 to i64\l  %16 = load %struct.stbtt__point*, %struct.stbtt__point** %5, align 8\l  %17 = getelementptr inbounds %struct.stbtt__point, %struct.stbtt__point*\l... %16, i64 %15\l  %18 = getelementptr inbounds %struct.stbtt__point, %struct.stbtt__point*\l... %17, i32 0, i32 0\l  store float %13, float* %18, align 4\l  %19 = load float, float* %8, align 4\l  %20 = load i32, i32* %6, align 4\l  %21 = sext i32 %20 to i64\l  %22 = load %struct.stbtt__point*, %struct.stbtt__point** %5, align 8\l  %23 = getelementptr inbounds %struct.stbtt__point, %struct.stbtt__point*\l... %22, i64 %21\l  %24 = getelementptr inbounds %struct.stbtt__point, %struct.stbtt__point*\l... %23, i32 0, i32 1\l  store float %19, float* %24, align 4\l  br label %25\l}"];
+	Node0x2a216e0 -> Node0x2a21ce0;
+	Node0x2a21ce0 [shape=record,label="{%25:\l\l  ret void\l}"];
+}
