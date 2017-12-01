@@ -41,7 +41,7 @@ int main(int argc, const char * argv[])
     /* calculate font scaling */
     float scale = stbtt_ScaleForPixelHeight(&info, l_h);
 
-    char* word = "AAAA    AAAA    AAAA    AAAB    AAAB    AAAB";// "how are you?";
+    char* word = "10";// "how are you?";
     
     int x = 0;
        
@@ -54,26 +54,29 @@ int main(int argc, const char * argv[])
     int i;
     for (i = 0; i < strlen(word); ++i)
     {
-        /* get bounding box for character (may be offset to account for chars that dip above or below the line */
-        int c_x1, c_y1, c_x2, c_y2;
-        stbtt_GetCodepointBitmapBox(&info, word[i], scale, scale, &c_x1, &c_y1, &c_x2, &c_y2);
-        
-        /* compute y (different characters have different heights */
-        int y = ascent + c_y1;
-        
-        /* render character (stride and offset is important here) */
-        int byteOffset = x + (y  * b_w);
-        stbtt_MakeCodepointBitmap(&info, bitmap + byteOffset, c_x2 - c_x1, c_y2 - c_y1, b_w, scale, scale, word[i]);
-        
-        /* how wide is this character */
-        int ax;
-        stbtt_GetCodepointHMetrics(&info, word[i], &ax, 0);
-        x += ax * scale;
-        
-        /* add kerning */
-        int kern;
-        kern = stbtt_GetCodepointKernAdvance(&info, word[i], word[i + 1]);
-        x += kern * scale;
+      for(int j = 0; j < 500; j++)
+        stbtt_FindGlyphIndex(&info, word[i]);
+//      printf("%d,", stbtt_FindGlyphIndex(&info, word[i]));
+//        /* get bounding box for character (may be offset to account for chars that dip above or below the line */
+//        int c_x1, c_y1, c_x2, c_y2;
+//        stbtt_GetCodepointBitmapBox(&info, word[i], scale, scale, &c_x1, &c_y1, &c_x2, &c_y2);
+//        
+//        /* compute y (different characters have different heights */
+//        int y = ascent + c_y1;
+//        
+//        /* render character (stride and offset is important here) */
+//        int byteOffset = x + (y  * b_w);
+//        stbtt_MakeCodepointBitmap(&info, bitmap + byteOffset, c_x2 - c_x1, c_y2 - c_y1, b_w, scale, scale, word[i]);
+//        
+//        /* how wide is this character */
+//        int ax;
+//        stbtt_GetCodepointHMetrics(&info, word[i], &ax, 0);
+//        x += ax * scale;
+//        
+//        /* add kerning */
+//        int kern;
+//        kern = stbtt_GetCodepointKernAdvance(&info, word[i], word[i + 1]);
+//        x += kern * scale;
     }
     
     /* save out a 1 channel image */
