@@ -1,5 +1,5 @@
 title = 'Yaos_Method';
-num_intervals = '279';
+num_intervals = '1222';
 interval = '1000000000';
 use_level2 = 1;
 use_mcpat = 1;

@@ -8,7 +8,7 @@ uint32_t l = 32; // number of bits
 // inputs
 uint32_t x = 11;
 uint32_t n;
-uint32_t n1_test = 8;
+uint32_t n1_test = 0xAA;
 uint32_t n2_test = 4294967295;
 uint32_t k = 1;
 

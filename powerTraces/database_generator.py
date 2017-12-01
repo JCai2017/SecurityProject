@@ -17,7 +17,9 @@ with open("database/database.h", "w+") as f:
 	f.write("#define CONSTANT_2 2\n")
 	f.write("#define CONSTANT_32 32\n")
 	f.write("#define CONSTANT_BIG 15485863\n")
-	f.write("#define INIT_LOCALS \"volatile int32_t a = 10; volatile int32_t b = 13; volatile int32_t result;\" \n")
+	f.write("#define INIT_LOCALS0 volatile int32_t a = 10 \n")
+	f.write("#define INIT_LOCALS1 volatile int32_t b = 13 \n")
+	f.write("#define INIT_LOCALS2 volatile int32_t result \n")
 
 for op in opList:
 	for con in constList:
@@ -37,5 +39,5 @@ for op in opList:
 				f.close()
 				counter += 1
 			with open("database/database.h", "a+") as f:
-				resstring = "  result = " + var + " " + op + " " + con + ";"
-				f.write("#define DATAPOINT" + str(counter) + " " + "\"void datapoint" + str(counter) + "(void){" + resstring + "}\"\n")
+				resstring = "result = " + var + " " + op + " " + con
+				f.write("#define DATAPOINT" + str(counter) + " " + "" + resstring + "\n")

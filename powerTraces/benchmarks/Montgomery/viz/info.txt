@@ -1,5 +1,5 @@
 title = 'Montgomery';
-num_intervals = '121';
+num_intervals = '188';
 interval = '1000000000';
 use_level2 = 1;
 use_mcpat = 1;

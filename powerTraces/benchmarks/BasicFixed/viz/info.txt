@@ -1,9 +1,0 @@
-title = 'BasicFixed';
-num_intervals = '200';
-interval = '1000000000';
-use_level2 = 1;
-use_mcpat = 1;
-use_level3 = 1;
-use_topo = 1;
-use_profile = 0;
-use_aso = 0;
