@@ -1,0 +1,5 @@
+digraph "CFG for 'write3' function" {
+	label="CFG for 'write3' function";
+
+	Node0x2a75d00 [shape=record,label="{%4:\l  %5 = alloca %struct._IO_FILE*, align 8\l  %6 = alloca i8, align 1\l  %7 = alloca i8, align 1\l  %8 = alloca i8, align 1\l  %9 = alloca [3 x i8], align 1\l  store %struct._IO_FILE* %0, %struct._IO_FILE** %5, align 8\l  store i8 %1, i8* %6, align 1\l  store i8 %2, i8* %7, align 1\l  store i8 %3, i8* %8, align 1\l  %10 = load i8, i8* %6, align 1\l  %11 = getelementptr inbounds [3 x i8], [3 x i8]* %9, i64 0, i64 0\l  store i8 %10, i8* %11, align 1\l  %12 = load i8, i8* %7, align 1\l  %13 = getelementptr inbounds [3 x i8], [3 x i8]* %9, i64 0, i64 1\l  store i8 %12, i8* %13, align 1\l  %14 = load i8, i8* %8, align 1\l  %15 = getelementptr inbounds [3 x i8], [3 x i8]* %9, i64 0, i64 2\l  store i8 %14, i8* %15, align 1\l  %16 = getelementptr inbounds [3 x i8], [3 x i8]* %9, i32 0, i32 0\l  %17 = load %struct._IO_FILE*, %struct._IO_FILE** %5, align 8\l  %18 = call i64 @fwrite(i8* %16, i64 3, i64 1, %struct._IO_FILE* %17)\l  ret void\l}"];
+}

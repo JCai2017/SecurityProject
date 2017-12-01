@@ -1,0 +1,5 @@
+digraph "CFG for 'stbtt_GetCodepointHMetrics' function" {
+	label="CFG for 'stbtt_GetCodepointHMetrics' function";
+
+	Node0x2a0cd00 [shape=record,label="{%4:\l  %5 = alloca %struct.stbtt_fontinfo*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32*, align 8\l  %8 = alloca i32*, align 8\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %5, align 8\l  store i32 %1, i32* %6, align 4\l  store i32* %2, i32** %7, align 8\l  store i32* %3, i32** %8, align 8\l  %9 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %10 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %5, align 8\l  %11 = load i32, i32* %6, align 4\l  %12 = call i32 @stbtt_FindGlyphIndex(%struct.stbtt_fontinfo* %10, i32 %11)\l  %13 = load i32*, i32** %7, align 8\l  %14 = load i32*, i32** %8, align 8\l  call void @stbtt_GetGlyphHMetrics(%struct.stbtt_fontinfo* %9, i32 %12, i32*\l... %13, i32* %14)\l  ret void\l}"];
+}

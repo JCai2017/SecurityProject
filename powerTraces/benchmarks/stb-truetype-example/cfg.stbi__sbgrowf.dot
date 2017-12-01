@@ -1,0 +1,37 @@
+digraph "CFG for 'stbi__sbgrowf' function" {
+	label="CFG for 'stbi__sbgrowf' function";
+
+	Node0x29786b0 [shape=record,label="{%3:\l  %4 = alloca i8**, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca i8*, align 8\l  store i8** %0, i8*** %4, align 8\l  store i32 %1, i32* %5, align 4\l  store i32 %2, i32* %6, align 4\l  %9 = load i8**, i8*** %4, align 8\l  %10 = load i8*, i8** %9, align 8\l  %11 = icmp ne i8* %10, null\l  br i1 %11, label %12, label %22\l|{<s0>T|<s1>F}}"];
+	Node0x29786b0:s0 -> Node0x29787b0;
+	Node0x29786b0:s1 -> Node0x2978cb0;
+	Node0x29787b0 [shape=record,label="{%12:\l\l  %13 = load i8**, i8*** %4, align 8\l  %14 = load i8*, i8** %13, align 8\l  %15 = bitcast i8* %14 to i32*\l  %16 = getelementptr inbounds i32, i32* %15, i64 -2\l  %17 = getelementptr inbounds i32, i32* %16, i64 0\l  %18 = load i32, i32* %17, align 4\l  %19 = mul nsw i32 2, %18\l  %20 = load i32, i32* %5, align 4\l  %21 = add nsw i32 %19, %20\l  br label %25\l}"];
+	Node0x29787b0 -> Node0x2979250;
+	Node0x2978cb0 [shape=record,label="{%22:\l\l  %23 = load i32, i32* %5, align 4\l  %24 = add nsw i32 %23, 1\l  br label %25\l}"];
+	Node0x2978cb0 -> Node0x2979250;
+	Node0x2979250 [shape=record,label="{%25:\l\l  %26 = phi i32 [ %21, %12 ], [ %24, %22 ]\l  store i32 %26, i32* %7, align 4\l  %27 = load i8**, i8*** %4, align 8\l  %28 = load i8*, i8** %27, align 8\l  %29 = icmp ne i8* %28, null\l  br i1 %29, label %30, label %35\l|{<s0>T|<s1>F}}"];
+	Node0x2979250:s0 -> Node0x29796b0;
+	Node0x2979250:s1 -> Node0x2979700;
+	Node0x29796b0 [shape=record,label="{%30:\l\l  %31 = load i8**, i8*** %4, align 8\l  %32 = load i8*, i8** %31, align 8\l  %33 = bitcast i8* %32 to i32*\l  %34 = getelementptr inbounds i32, i32* %33, i64 -2\l  br label %36\l}"];
+	Node0x29796b0 -> Node0x2979ab0;
+	Node0x2979700 [shape=record,label="{%35:\l\l  br label %36\l}"];
+	Node0x2979700 -> Node0x2979ab0;
+	Node0x2979ab0 [shape=record,label="{%36:\l\l  %37 = phi i32* [ %34, %30 ], [ null, %35 ]\l  %38 = bitcast i32* %37 to i8*\l  %39 = load i32, i32* %6, align 4\l  %40 = load i32, i32* %7, align 4\l  %41 = mul nsw i32 %39, %40\l  %42 = sext i32 %41 to i64\l  %43 = add i64 %42, 8\l  %44 = call i8* @realloc(i8* %38, i64 %43) #7\l  store i8* %44, i8** %8, align 8\l  %45 = load i8*, i8** %8, align 8\l  %46 = icmp ne i8* %45, null\l  br i1 %46, label %47, label %48\l|{<s0>T|<s1>F}}"];
+	Node0x2979ab0:s0 -> Node0x297a280;
+	Node0x2979ab0:s1 -> Node0x297a2d0;
+	Node0x297a280 [shape=record,label="{%47:\l\l  br label %50\l}"];
+	Node0x297a280 -> Node0x297a3b0;
+	Node0x297a2d0 [shape=record,label="{%48:\l\l  call void @__assert_fail(i8* getelementptr inbounds ([2 x i8], [2 x i8]*\l... @.str.29, i32 0, i32 0), i8* getelementptr inbounds ([20 x i8], [20 x i8]*\l... @.str.3, i32 0, i32 0), i32 201, i8* getelementptr inbounds ([39 x i8], [39 x\l... i8]* @__PRETTY_FUNCTION__.stbi__sbgrowf, i32 0, i32 0)) #8\l  unreachable\l}"];
+	Node0x2987ac0 [shape=record,label="{%49:                                                  \l  br label %50\l}"];
+	Node0x2987ac0 -> Node0x297a3b0;
+	Node0x297a3b0 [shape=record,label="{%50:\l\l  %51 = load i8*, i8** %8, align 8\l  %52 = icmp ne i8* %51, null\l  br i1 %52, label %53, label %73\l|{<s0>T|<s1>F}}"];
+	Node0x297a3b0:s0 -> Node0x2987c90;
+	Node0x297a3b0:s1 -> Node0x2987ce0;
+	Node0x2987c90 [shape=record,label="{%53:\l\l  %54 = load i8**, i8*** %4, align 8\l  %55 = load i8*, i8** %54, align 8\l  %56 = icmp ne i8* %55, null\l  br i1 %56, label %61, label %57\l|{<s0>T|<s1>F}}"];
+	Node0x2987c90:s0 -> Node0x2987f00;
+	Node0x2987c90:s1 -> Node0x2987f50;
+	Node0x2987f50 [shape=record,label="{%57:\l\l  %58 = load i8*, i8** %8, align 8\l  %59 = bitcast i8* %58 to i32*\l  %60 = getelementptr inbounds i32, i32* %59, i64 1\l  store i32 0, i32* %60, align 4\l  br label %61\l}"];
+	Node0x2987f50 -> Node0x2987f00;
+	Node0x2987f00 [shape=record,label="{%61:\l\l  %62 = load i8*, i8** %8, align 8\l  %63 = bitcast i8* %62 to i32*\l  %64 = getelementptr inbounds i32, i32* %63, i64 2\l  %65 = bitcast i32* %64 to i8*\l  %66 = load i8**, i8*** %4, align 8\l  store i8* %65, i8** %66, align 8\l  %67 = load i32, i32* %7, align 4\l  %68 = load i8**, i8*** %4, align 8\l  %69 = load i8*, i8** %68, align 8\l  %70 = bitcast i8* %69 to i32*\l  %71 = getelementptr inbounds i32, i32* %70, i64 -2\l  %72 = getelementptr inbounds i32, i32* %71, i64 0\l  store i32 %67, i32* %72, align 4\l  br label %73\l}"];
+	Node0x2987f00 -> Node0x2987ce0;
+	Node0x2987ce0 [shape=record,label="{%73:\l\l  %74 = load i8**, i8*** %4, align 8\l  %75 = load i8*, i8** %74, align 8\l  ret i8* %75\l}"];
+}

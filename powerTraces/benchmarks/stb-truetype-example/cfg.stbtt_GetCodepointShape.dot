@@ -1,0 +1,5 @@
+digraph "CFG for 'stbtt_GetCodepointShape' function" {
+	label="CFG for 'stbtt_GetCodepointShape' function";
+
+	Node0x29cd710 [shape=record,label="{%3:\l  %4 = alloca %struct.stbtt_fontinfo*, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca %struct.stbtt_vertex**, align 8\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %4, align 8\l  store i32 %1, i32* %5, align 4\l  store %struct.stbtt_vertex** %2, %struct.stbtt_vertex*** %6, align 8\l  %7 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %4, align 8\l  %8 = load %struct.stbtt_fontinfo*, %struct.stbtt_fontinfo** %4, align 8\l  %9 = load i32, i32* %5, align 4\l  %10 = call i32 @stbtt_FindGlyphIndex(%struct.stbtt_fontinfo* %8, i32 %9)\l  %11 = load %struct.stbtt_vertex**, %struct.stbtt_vertex*** %6, align 8\l  %12 = call i32 @stbtt_GetGlyphShape(%struct.stbtt_fontinfo* %7, i32 %10,\l... %struct.stbtt_vertex** %11)\l  ret i32 %12\l}"];
+}

@@ -1,0 +1,5 @@
+digraph "CFG for 'stbtt_FreeShape' function" {
+	label="CFG for 'stbtt_FreeShape' function";
+
+	Node0x2a13a70 [shape=record,label="{%2:\l  %3 = alloca %struct.stbtt_fontinfo*, align 8\l  %4 = alloca %struct.stbtt_vertex*, align 8\l  store %struct.stbtt_fontinfo* %0, %struct.stbtt_fontinfo** %3, align 8\l  store %struct.stbtt_vertex* %1, %struct.stbtt_vertex** %4, align 8\l  %5 = load %struct.stbtt_vertex*, %struct.stbtt_vertex** %4, align 8\l  %6 = bitcast %struct.stbtt_vertex* %5 to i8*\l  call void @free(i8* %6) #7\l  ret void\l}"];
+}
