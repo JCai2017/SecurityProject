@@ -2,6 +2,10 @@
 #include <math.h>
 #include <stdio.h>
 
+#define CONSTANT_2 2
+#define CONSTANT_32 32
+#define CONSTANT_BIG 15485863
+
 uint32_t y = 1;
 uint32_t l = 32; // number of bits
 
@@ -15,6 +19,10 @@ uint32_t k = 1;
 int main(void){
   uint32_t num = 5000;
   int z;
+  volatile uint32_t b = 13;
+  volatile uint32_t a = 10;
+  volatile uint32_t temp;
+  volatile uint32_t res;
 
   n = n1_test;
   int32_t i = l - 1;
@@ -27,6 +35,13 @@ int main(void){
       for (z = 0; z < num; z++){ // dummy loop begins
         ty = ty*ty;
         ti = ti - 1;
+        
+        temp = b * CONSTANT_BIG;
+        res = a / CONSTANT_BIG;
+        temp = b * CONSTANT_BIG;
+        res = CONSTANT_BIG * CONSTANT_32;
+//        temp = b << CONSTANT_32;
+//        temp = b / CONSTANT_2;
       }
   //        printf("first %d\n", y);
     }

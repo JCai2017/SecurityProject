@@ -1,4 +1,4 @@
-title = 'Sliding_Window';
+title = 'Sliding_Window_Fixed';
 num_intervals = '1183';
 interval = '1000000000';
 use_level2 = 1;
