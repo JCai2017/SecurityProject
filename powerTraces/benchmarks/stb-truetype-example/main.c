@@ -51,10 +51,10 @@ int main(int argc, const char * argv[])
     ascent *= scale;
     descent *= scale;
     
-    int i;
+    int i, j;
     for (i = 0; i < strlen(word); ++i)
     {
-      for(int j = 0; j < 500; j++)
+      for(j = 0; j < 500; j++)
         stbtt_FindGlyphIndex(&info, word[i]);
 //      printf("%d,", stbtt_FindGlyphIndex(&info, word[i]));
 //        /* get bounding box for character (may be offset to account for chars that dip above or below the line */

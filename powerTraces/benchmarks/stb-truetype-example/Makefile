@@ -1,8 +1,8 @@
 stb-example: main.c
-	gcc $^ -o $@ -lm
+	clang -O0 $^ -o $@ -lm
 
 test: main.c
-	gcc $^ -o stb-example -lm
+	clang -O0 $^ -o stb-example -lm
 	./stb-example
 
 clean: 

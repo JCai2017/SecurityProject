@@ -1,13 +1,13 @@
                                      | Core 0    
-  Instructions                       |    5089507
-  Cycles                             |    3251584
-  IPC                                |       1.57
-  Time (ns)                          |    1222400
-  Idle time (ns)                     |         13
-  Idle time (%)                      |       0.0%
+  Instructions                       |    5089497
+  Cycles                             |    3253446
+  IPC                                |       1.56
+  Time (ns)                          |    1223100
+  Idle time (ns)                     |        -40
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
-  num correct                        |     513580
-  num incorrect                      |       1537
+  num correct                        |     513581
+  num incorrect                      |       1535
   misprediction rate                 |      0.30%
   mpki                               |       0.30
 TLB Summary                          |           
@@ -17,42 +17,42 @@ TLB Summary                          |
     miss rate                        |      0.01%
     mpki                             |       0.01
   D-TLB                              |           
-    num accesses                     |    2783982
-    num misses                       |         76
+    num accesses                     |    2783981
+    num misses                       |         80
     miss rate                        |      0.00%
-    mpki                             |       0.01
+    mpki                             |       0.02
   L2 TLB                             |           
-    num accesses                     |        116
+    num accesses                     |        120
     num misses                       |        111
-    miss rate                        |     95.69%
+    miss rate                        |     92.50%
     mpki                             |       0.02
 Cache Summary                        |           
   Cache L1-I                         |           
     num cache accesses               |     509890
-    num cache misses                 |        691
+    num cache misses                 |        692
     miss rate                        |      0.14%
     mpki                             |       0.14
   Cache L1-D                         |           
-    num cache accesses               |    2783982
+    num cache accesses               |    2783981
     num cache misses                 |       1679
     miss rate                        |      0.06%
     mpki                             |       0.33
   Cache L2                           |           
-    num cache accesses               |       2406
+    num cache accesses               |       2408
     num cache misses                 |       2195
-    miss rate                        |     91.23%
+    miss rate                        |     91.15%
     mpki                             |       0.43
   Cache L3                           |           
-    num cache accesses               |       2231
-    num cache misses                 |       2195
-    miss rate                        |     98.39%
+    num cache accesses               |       2232
+    num cache misses                 |       2194
+    miss rate                        |     98.30%
     mpki                             |       0.43
 DRAM summary                         |           
-  num dram accesses                  |       2195
-  average dram access latency (ns)   |      72.54
-  average dram queueing delay        |      19.11
+  num dram accesses                  |       2194
+  average dram access latency (ns)   |      72.41
+  average dram queueing delay        |      18.98
   average dram bandwidth utilization |      1.00%
 Coherency Traffic                    |           
-  num loads from dram                |       1058
+  num loads from dram                |       1059
   num loads from dram cache          |          0
   num loads from remote cache        |          0
