@@ -1,5 +1,5 @@
 title = 'Basic_Random_Key';
-num_intervals = '195';
+num_intervals = '194';
 interval = '1000000000';
 use_level2 = 1;
 use_mcpat = 1;

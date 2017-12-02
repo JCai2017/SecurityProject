@@ -1,15 +1,15 @@
                                      | Core 0    
   Instructions                       |     767793
-  Cycles                             |     537586
+  Cycles                             |     537054
   IPC                                |       1.43
-  Time (ns)                          |     202100
-  Idle time (ns)                     |         80
-  Idle time (%)                      |       0.0%
+  Time (ns)                          |     201900
+  Idle time (ns)                     |        -86
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
-  num correct                        |      53318
-  num incorrect                      |       1502
-  misprediction rate                 |      2.74%
-  mpki                               |       1.96
+  num correct                        |      53322
+  num incorrect                      |       1498
+  misprediction rate                 |      2.73%
+  mpki                               |       1.95
 TLB Summary                          |           
   I-TLB                              |           
     num accesses                     |      89552
@@ -18,13 +18,13 @@ TLB Summary                          |
     mpki                             |       0.05
   D-TLB                              |           
     num accesses                     |     473155
-    num misses                       |        126
-    miss rate                        |      0.03%
-    mpki                             |       0.16
+    num misses                       |         88
+    miss rate                        |      0.02%
+    mpki                             |       0.11
   L2 TLB                             |           
-    num accesses                     |        166
+    num accesses                     |        128
     num misses                       |        110
-    miss rate                        |     66.27%
+    miss rate                        |     85.94%
     mpki                             |       0.14
 Cache Summary                        |           
   Cache L1-I                         |           
