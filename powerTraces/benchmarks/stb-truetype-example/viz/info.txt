@@ -1,5 +1,5 @@
 title = 'stb-truetype-example';
-num_intervals = '1304';
+num_intervals = '1486';
 interval = '32000000000';
 use_level2 = 1;
 use_mcpat = 1;

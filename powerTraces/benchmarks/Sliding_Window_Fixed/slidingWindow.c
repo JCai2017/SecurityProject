@@ -21,8 +21,8 @@ int main(void){
   int z;
   volatile uint32_t b = 13;
   volatile uint32_t a = 10;
-  volatile uint32_t temp;
-  volatile uint32_t res;
+  volatile uint32_t temp, res, blah, garbage, thing, that;
+  volatile uint32_t this, foo, bar, then;
 
   n = n1_test;
   int32_t i = l - 1;
@@ -38,10 +38,13 @@ int main(void){
         
         temp = b * CONSTANT_BIG;
         res = a / CONSTANT_BIG;
-        temp = b * CONSTANT_BIG;
-        res = CONSTANT_BIG * CONSTANT_32;
-//        temp = b << CONSTANT_32;
-//        temp = b / CONSTANT_2;
+        blah = b + CONSTANT_BIG;
+        garbage = CONSTANT_BIG * CONSTANT_32;
+        thing = b << CONSTANT_32;
+        that = b / CONSTANT_2;
+        this = b * CONSTANT_2;
+        __asm__("NOP");
+        __asm__("FNOP");
       }
   //        printf("first %d\n", y);
     }
