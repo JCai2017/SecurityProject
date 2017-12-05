@@ -5,7 +5,7 @@ int main(void){
   volatile uint32_t x;
   volatile uint32_t n;
   volatile uint32_t y;
-  int i;
+  int i, j;
   volatile uint32_t base = 3;
   volatile uint32_t expo0 = 4;
   volatile uint32_t expo1 = 5;
@@ -14,7 +14,7 @@ int main(void){
   volatile uint32_t b = 13;
   volatile uint32_t key = KEY;
 
-  while(key != 0){
+  for(j = 0; j < 8; j ++){
     if(key % 2 == 0){
       for(i = 0; i < 5000; i ++){
         x = a * b;
