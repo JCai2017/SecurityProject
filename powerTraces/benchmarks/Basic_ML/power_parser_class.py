@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # takes input power trace .html and output file location .csv
 # python power_parser.py run_results-energy.json <outputfile>.csv
 

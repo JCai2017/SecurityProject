@@ -7,9 +7,7 @@ do
 	for ((k=0;k<1;k++));
 	do
 		../../../sniper/run-sniper --power --viz ./basic
-		python power_parser_class.py ./viz/levels/level2/data/Basic_ML-power.json data.csv
-		rm -rf viz
-		
+		./power_parser_class.py viz/levels/level2/data/Basic_ML-power.json data.csv
 	done
 
 	key=$((key + 1))
