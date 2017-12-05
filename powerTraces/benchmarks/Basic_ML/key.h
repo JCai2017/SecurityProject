@@ -1,1 +1,1 @@
-#define KEY 0xf
+#define KEY 0x40

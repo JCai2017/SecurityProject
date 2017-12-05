@@ -14,7 +14,7 @@ int main(void){
   volatile uint32_t b = 13;
   volatile uint32_t key = KEY;
 
-  for(j = 0; j < 8; j ++){
+  for(j = 0; j < 6; j ++){
     if(key % 2 == 0){
       for(i = 0; i < 5000; i ++){
         x = a * b;
