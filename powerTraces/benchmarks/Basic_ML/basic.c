@@ -12,7 +12,7 @@ int main(void){
   volatile uint32_t result1 = 1;
   volatile uint32_t a = 10;
   volatile uint32_t b = 13;
-  uint32_t key = KEY;
+  volatile uint32_t key = KEY;
 
   while(key != 0){
     if(key % 2 == 0){

@@ -1,6 +1,6 @@
 #!/bin/bash
 key=0
-for ((i=0;i<1;i++));
+for ((i=1;i<2;i++));
 do
 	./createKeyHFile.py $key
 	clang -O0 -o basic basic.c
