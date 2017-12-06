@@ -5,14 +5,14 @@ int main(void){
   volatile uint32_t x;
   volatile uint32_t n;
   volatile uint32_t y;
-  int i;
+  int i, j;
   volatile uint32_t base = 3;
   volatile uint32_t expo0 = 4;
   volatile uint32_t expo1 = 5;
   volatile uint32_t result = 1;
   uint32_t key = KEY;
 
-  while(key != 0){
+  for(j = 0; j < 6; j ++){
     if(key % 2 == 0){
       for(i = 0; i < 5000; i ++){
         x = base * base;
