@@ -8,5 +8,5 @@ do
 	./power_parser_class.py viz/levels/level2/data/Basic_Base_Overhead-power.json data.csv
 
 	key=$((key * 2))
-	key = $((key + 1))
+	key=$((key + 1))
 done
