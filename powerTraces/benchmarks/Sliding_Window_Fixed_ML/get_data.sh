@@ -3,7 +3,7 @@ key=1
 for ((i=1;i<65;i++));
 do
 	./createKeyHFile.py $key
-	clang -O0 -o slidingWindow slidingWindow.c 
+	clang -O0 -o slidingWindow slidingWindow.c -lm 
 	for ((k=0;k<9;k++));
 	do
 		../../../sniper/run-sniper --power --viz ./slidingWindow
