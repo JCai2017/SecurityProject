@@ -15,14 +15,17 @@ from matplotlib import pyplot
 np.random.seed(7)
 
 # load the dataset 
-df = pd.read_csv('test_power.csv')
+#df = pd.read_csv('data.csv')
+df = pd.read_table('data.csv', sep=",", usecols=range(108))
+print df
 
 # Rescale it - should help network performance
 scaler = MinMaxScaler(feature_range=(0,1))
 X = scaler.fit_transform(df)
 
-y = pd.read_csv('test_key.csv')
+y = pd.read_csv('key.csv')
 y = to_categorical(y, 1 << 4)
+print y.shape
 
 # Just so we can have a validation set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=7)
