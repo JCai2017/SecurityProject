@@ -38,6 +38,16 @@ static const char program_let[] =
 "10 let a = 42\n\
 20 end\n";
 
+static const char program_simple_multiply[] =
+"10 let a = 11 * 6\n\
+15 print a\n\
+20 end\n";
+
+static const char program_simple_add[] =
+"10 let a = 11 + 6\n\
+15 print a\n\
+20 end\n";
+
 static const char program_goto[] =
 "10 goto 50\n\
 20 goto 40\n\
@@ -68,7 +78,6 @@ rem 45 print a, i, j, k\n\
 60 next j\n\
 70 next i\n\
 80 end\n";
-
 
 static const char program_fibs[] =
 "20 let a = 1\n\
@@ -131,8 +140,11 @@ main(void)
   //run(program_goto);
   //assert(ubasic_get_variable(2) == 108);
 
-  run(program_loop);
-  run(program_loop2);
+  run(program_simple_add);
+  // run(program_simple_multiply);
+  // run(program_loop);
+  // run(program_loop2);
+
   //assert(ubasic_get_variable(0) == (VARIABLE_TYPE)(126 * 126 * 10));
 
   //run(program_fibs);
