@@ -1,11 +1,12 @@
 #include<stdint.h>
+#include "key.h"
 
 int main(void){
   volatile uint32_t x = 3;
   volatile uint32_t y = 1;
   volatile uint32_t u = 1;
   volatile uint32_t result = 1;
-  volatile uint32_t j = 0xA;
+  volatile uint32_t j = KEY;
   volatile uint32_t xbi = 9;
   int i, k;
 

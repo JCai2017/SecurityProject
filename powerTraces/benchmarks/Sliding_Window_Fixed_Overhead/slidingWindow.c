@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <math.h>
 #include <stdio.h>
+#include "key.h"
 
 #define CONSTANT_2 2
 #define CONSTANT_32 32
@@ -12,7 +13,7 @@ uint32_t l = 32; // number of bits
 // inputs
 uint32_t x = 11;
 uint32_t n;
-uint32_t n1_test = 0xAA;
+uint32_t n1_test = KEY;
 uint32_t n2_test = 4294967295;
 uint32_t k = 1;
 
