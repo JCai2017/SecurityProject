@@ -1,4 +1,5 @@
 #include<stdint.h>
+#include "key.h"
 
 #define CONSTANT_2 2;
 #define CONSTANT_BIG 15485863;
@@ -8,7 +9,7 @@ int main(void){
   volatile uint32_t y = 1;
   volatile uint32_t u = 1;
   volatile uint32_t result = 1;
-  volatile uint32_t j = 0xA;
+  volatile uint32_t j = KEY;
   volatile uint32_t xbi = 9;
   volatile uint32_t temp;
   volatile uint32_t a = 10;

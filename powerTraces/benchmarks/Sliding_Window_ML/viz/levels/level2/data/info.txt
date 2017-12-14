@@ -1,0 +1,9 @@
+infostr = '{"intervalsize": 1000000000, "use_mcpat": true, "num_intervals": 1, "name": "Sliding_Window_ML"}';
+palette = new Rickshaw.Color.Palette( { scheme: 'munin' } );
+cpipercentagelabels = [{"color": "rgb(102,0,0)", "name": "base"}, {"color": "rgb(153,0,0)", "name": "depend-int"}, {"color": "rgb(204,0,0)", "name": "depend-branch"}, {"color": "rgb(255,0,0)", "name": "issue-port2"}, {"color": "rgb(255,50,50)", "name": "issue-port34"}, {"color": "rgb(255,101,101)", "name": "issue-port5"}, {"color": "rgb(255,152,152)", "name": "issue-port015"}, {"color": "rgb(255,255,0)", "name": "branch"}, {"color": "rgb(0,102,0)", "name": "ifetch"}, {"color": "rgb(0,255,0)", "name": "mem-l1d"}, {"color": "rgb(153,255,153)", "name": "mem-dram"}];
+palette = new Rickshaw.Color.Palette( { scheme: 'munin' } );
+cpipercentagesimplifiedlabels = [{"color": "rgb(255,0,0)", "name": "compute"}, {"color": "rgb(255,255,0)", "name": "branch"}, {"color": "rgb(0,255,0)", "name": "memory"}, {"color": "rgb(0,0,255)", "name": "synchronize"}];
+palette = new Rickshaw.Color.Palette( { scheme: 'munin' } );
+cpificlabels = '';
+palette = new Rickshaw.Color.Palette( { scheme: 'munin' } );
+simplelabels = [{"color": "rgb(255,0,0)", "name": "compute"}, {"color": "rgb(255,255,0)", "name": "branch"}, {"color": "rgb(0,255,0)", "name": "memory"}, {"color": "rgb(0,0,255)", "name": "synchronize"}];

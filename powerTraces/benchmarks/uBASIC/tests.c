@@ -38,6 +38,16 @@ static const char program_let[] =
 "10 let a = 42\n\
 20 end\n";
 
+static const char program_simple_multiply[] = 
+"10 let a = 11 * 6\n\
+15 print a\n\
+20 end\n";
+
+static const char program_simple_add[] = 
+"10 let a = 11 + 6\n\
+15 print a\n\
+20 end\n";
+
 static const char program_goto[] =
 "10 goto 50\n\
 20 goto 40\n\
@@ -48,9 +58,9 @@ static const char program_goto[] =
 70 end\n";
 
 static const char program_loop[] =
-"10 for i = 0 to 126\n\
-20 for j = 0 to 126\n\
-30 for k = 0 to 10\n\
+"10 for i = 0 to 1\n\
+20 for j = 0 to 1\n\
+30 for k = 0 to 1\n\
 40 let a = i * j * k\n\
 rem 45 print a, i, j, k\n\
 50 next k\n\
@@ -59,9 +69,9 @@ rem 45 print a, i, j, k\n\
 80 end\n";
 
 static const char program_loop2[] =
-"10 for i = 0 to 126\n\
-20 for j = 0 to 126\n\
-30 for k = 0 to 10\n\
+"10 for i = 0 to 1\n\
+20 for j = 0 to 1\n\
+30 for k = 0 to 1\n\
 40 let a = i + j + k\n\
 rem 45 print a, i, j, k\n\
 50 next k\n\
@@ -101,7 +111,7 @@ void poke(VARIABLE_TYPE arg, VARIABLE_TYPE value) {
 void run(const char program[]) {
   static int test_num = 0;
   test_num++;
-  printf("Running test #%u... ", test_num);
+  //printf("Running test #%u... ", test_num);
   fflush(stdout);
 
   clock_t start_t, end_t;
@@ -131,8 +141,14 @@ main(void)
   //run(program_goto);
   //assert(ubasic_get_variable(2) == 108);
 
-  run(program_loop);
-  run(program_loop2);
+  int i;
+  for(i = 0; i < 100; i ++){
+    run(program_simple_multiply);
+  }
+
+  for(i = 0; i < 100; i ++){
+    run(program_simple_add);
+  }
   //assert(ubasic_get_variable(0) == (VARIABLE_TYPE)(126 * 126 * 10));
 
   //run(program_fibs);
