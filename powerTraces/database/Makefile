@@ -6,8 +6,8 @@ all: $(PROG)
 
 %: %.c %.s
 #	$(CC) -o $@ $<
-	clang -S $<
-	clang -o $@ $(word 2, $^)
+	clang -O0 -S $<
+	clang -O0 -o $@ $(word 2, $^)
 
 clean:
 	rm -rf $(PROG)
