@@ -1,15 +1,15 @@
                                      | Core 0    
   Instructions                       |     132619
-  Cycles                             |     283556
+  Cycles                             |     281694
   IPC                                |       0.47
-  Time (ns)                          |     106600
-  Idle time (ns)                     |         28
-  Idle time (%)                      |       0.0%
+  Time (ns)                          |     105900
+  Idle time (ns)                     |         -7
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
-  num correct                        |      18295
-  num incorrect                      |       1504
-  misprediction rate                 |      7.60%
-  mpki                               |      11.34
+  num correct                        |      18306
+  num incorrect                      |       1493
+  misprediction rate                 |      7.54%
+  mpki                               |      11.26
 TLB Summary                          |           
   I-TLB                              |           
     num accesses                     |      19521
@@ -18,13 +18,13 @@ TLB Summary                          |
     mpki                             |       0.30
   D-TLB                              |           
     num accesses                     |      58047
-    num misses                       |         80
-    miss rate                        |      0.14%
-    mpki                             |       0.60
+    num misses                       |         85
+    miss rate                        |      0.15%
+    mpki                             |       0.64
   L2 TLB                             |           
-    num accesses                     |        120
+    num accesses                     |        125
     num misses                       |        111
-    miss rate                        |     92.50%
+    miss rate                        |     88.80%
     mpki                             |       0.84
 Cache Summary                        |           
   Cache L1-I                         |           
@@ -34,25 +34,25 @@ Cache Summary                        |
     mpki                             |       5.19
   Cache L1-D                         |           
     num cache accesses               |      58047
-    num cache misses                 |       1682
-    miss rate                        |      2.90%
-    mpki                             |      12.68
+    num cache misses                 |       1680
+    miss rate                        |      2.89%
+    mpki                             |      12.67
   Cache L2                           |           
-    num cache accesses               |       2407
-    num cache misses                 |       2191
-    miss rate                        |     91.03%
-    mpki                             |      16.52
+    num cache accesses               |       2404
+    num cache misses                 |       2192
+    miss rate                        |     91.18%
+    mpki                             |      16.53
   Cache L3                           |           
     num cache accesses               |       2228
-    num cache misses                 |       2191
-    miss rate                        |     98.34%
-    mpki                             |      16.52
+    num cache misses                 |       2192
+    miss rate                        |     98.38%
+    mpki                             |      16.53
 DRAM summary                         |           
-  num dram accesses                  |       2191
-  average dram access latency (ns)   |      71.97
-  average dram queueing delay        |      18.54
+  num dram accesses                  |       2192
+  average dram access latency (ns)   |      72.19
+  average dram queueing delay        |      18.76
   average dram bandwidth utilization |     17.00%
 Coherency Traffic                    |           
-  num loads from dram                |       1060
+  num loads from dram                |       1059
   num loads from dram cache          |          0
   num loads from remote cache        |          0

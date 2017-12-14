@@ -125,7 +125,7 @@
 			<stat name="int_instructions" value="202"/>
 			<stat name="fp_instructions" value="0"/>
 			<stat name="branch_instructions" value="79"/>
-			<stat name="branch_mispredictions" value="30"/>
+			<stat name="branch_mispredictions" value="31"/>
 			<stat name="load_instructions" value="103"/>
 			<stat name="store_instructions" value="43"/>
 			<stat name="committed_instructions" value="281"/>

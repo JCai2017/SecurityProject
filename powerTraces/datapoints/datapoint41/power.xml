@@ -125,15 +125,15 @@
 			<stat name="int_instructions" value="202"/>
 			<stat name="fp_instructions" value="0"/>
 			<stat name="branch_instructions" value="64"/>
-			<stat name="branch_mispredictions" value="21"/>
+			<stat name="branch_mispredictions" value="22"/>
 			<stat name="load_instructions" value="90"/>
 			<stat name="store_instructions" value="42"/>
 			<stat name="committed_instructions" value="266"/>
 			<stat name="committed_int_instructions" value="202"/>
 			<stat name="committed_fp_instructions" value="0"/>
 			<stat name="total_cycles" value="2660"/>
-			<stat name="idle_cycles" value="59"/>
-			<stat name="busy_cycles"  value="2600"/>
+			<stat name="idle_cycles" value="87"/>
+			<stat name="busy_cycles"  value="2572"/>
 			<!-- instruction buffer stats -->
 			<!-- ROB stats, both RS and Phy based OoOs have ROB
 			performance simulator should capture the difference on accesses,

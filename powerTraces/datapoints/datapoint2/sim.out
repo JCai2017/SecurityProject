@@ -1,15 +1,15 @@
                                      | Core 0    
   Instructions                       |     132619
-  Cycles                             |     284354
+  Cycles                             |     283822
   IPC                                |       0.47
-  Time (ns)                          |     106900
-  Idle time (ns)                     |         21
-  Idle time (%)                      |       0.0%
+  Time (ns)                          |     106700
+  Idle time (ns)                     |        -26
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
-  num correct                        |      18294
-  num incorrect                      |       1505
-  misprediction rate                 |      7.60%
-  mpki                               |      11.35
+  num correct                        |      18303
+  num incorrect                      |       1496
+  misprediction rate                 |      7.56%
+  mpki                               |      11.28
 TLB Summary                          |           
   I-TLB                              |           
     num accesses                     |      19521
@@ -18,14 +18,14 @@ TLB Summary                          |
     mpki                             |       0.30
   D-TLB                              |           
     num accesses                     |      58048
-    num misses                       |         95
-    miss rate                        |      0.16%
-    mpki                             |       0.72
+    num misses                       |         84
+    miss rate                        |      0.14%
+    mpki                             |       0.63
   L2 TLB                             |           
-    num accesses                     |        135
-    num misses                       |        110
-    miss rate                        |     81.48%
-    mpki                             |       0.83
+    num accesses                     |        124
+    num misses                       |        111
+    miss rate                        |     89.52%
+    mpki                             |       0.84
 Cache Summary                        |           
   Cache L1-I                         |           
     num cache accesses               |      19521
@@ -34,23 +34,23 @@ Cache Summary                        |
     mpki                             |       5.19
   Cache L1-D                         |           
     num cache accesses               |      58048
-    num cache misses                 |       1681
-    miss rate                        |      2.90%
-    mpki                             |      12.68
+    num cache misses                 |       1680
+    miss rate                        |      2.89%
+    mpki                             |      12.67
   Cache L2                           |           
-    num cache accesses               |       2407
-    num cache misses                 |       2195
-    miss rate                        |     91.19%
-    mpki                             |      16.55
-  Cache L3                           |           
-    num cache accesses               |       2233
+    num cache accesses               |       2406
     num cache misses                 |       2192
-    miss rate                        |     98.16%
+    miss rate                        |     91.11%
+    mpki                             |      16.53
+  Cache L3                           |           
+    num cache accesses               |       2230
+    num cache misses                 |       2192
+    miss rate                        |     98.30%
     mpki                             |      16.53
 DRAM summary                         |           
   num dram accesses                  |       2192
-  average dram access latency (ns)   |      72.00
-  average dram queueing delay        |      18.57
+  average dram access latency (ns)   |      72.02
+  average dram queueing delay        |      18.59
   average dram bandwidth utilization |     17.00%
 Coherency Traffic                    |           
   num loads from dram                |       1061

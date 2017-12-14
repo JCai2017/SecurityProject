@@ -1,15 +1,15 @@
                                      | Core 0    
   Instructions                       |     132619
-  Cycles                             |     283290
+  Cycles                             |     282226
   IPC                                |       0.47
-  Time (ns)                          |     106500
-  Idle time (ns)                     |         57
-  Idle time (%)                      |       0.1%
+  Time (ns)                          |     106100
+  Idle time (ns)                     |        -22
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
-  num correct                        |      18307
-  num incorrect                      |       1492
-  misprediction rate                 |      7.54%
-  mpki                               |      11.25
+  num correct                        |      18297
+  num incorrect                      |       1502
+  misprediction rate                 |      7.59%
+  mpki                               |      11.33
 TLB Summary                          |           
   I-TLB                              |           
     num accesses                     |      19521
@@ -18,13 +18,13 @@ TLB Summary                          |
     mpki                             |       0.30
   D-TLB                              |           
     num accesses                     |      58048
-    num misses                       |         82
-    miss rate                        |      0.14%
-    mpki                             |       0.62
-  L2 TLB                             |           
-    num accesses                     |        122
     num misses                       |        111
-    miss rate                        |     90.98%
+    miss rate                        |      0.19%
+    mpki                             |       0.84
+  L2 TLB                             |           
+    num accesses                     |        151
+    num misses                       |        111
+    miss rate                        |     73.51%
     mpki                             |       0.84
 Cache Summary                        |           
   Cache L1-I                         |           
@@ -49,8 +49,8 @@ Cache Summary                        |
     mpki                             |      16.52
 DRAM summary                         |           
   num dram accesses                  |       2191
-  average dram access latency (ns)   |      72.07
-  average dram queueing delay        |      18.65
+  average dram access latency (ns)   |      72.11
+  average dram queueing delay        |      18.68
   average dram bandwidth utilization |     17.00%
 Coherency Traffic                    |           
   num loads from dram                |       1060

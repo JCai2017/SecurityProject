@@ -1,5 +1,5 @@
 title = 'qSort';
-num_intervals = '1214';
+num_intervals = '1198';
 interval = '2000000000';
 use_level2 = 1;
 use_mcpat = 1;

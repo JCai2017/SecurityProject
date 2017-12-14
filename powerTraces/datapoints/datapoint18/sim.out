@@ -1,10 +1,10 @@
                                      | Core 0    
   Instructions                       |     157619
-  Cycles                             |     270522
+  Cycles                             |     270256
   IPC                                |       0.58
-  Time (ns)                          |     101700
-  Idle time (ns)                     |         25
-  Idle time (%)                      |       0.0%
+  Time (ns)                          |     101600
+  Idle time (ns)                     |        -19
+  Idle time (%)                      |      -0.0%
 Branch predictor stats               |           
   num correct                        |      18294
   num incorrect                      |       1505
@@ -18,13 +18,13 @@ TLB Summary                          |
     mpki                             |       0.25
   D-TLB                              |           
     num accesses                     |      63047
-    num misses                       |         75
+    num misses                       |         76
     miss rate                        |      0.12%
     mpki                             |       0.48
   L2 TLB                             |           
-    num accesses                     |        115
+    num accesses                     |        116
     num misses                       |        110
-    miss rate                        |     95.65%
+    miss rate                        |     94.83%
     mpki                             |       0.70
 Cache Summary                        |           
   Cache L1-I                         |           
@@ -49,8 +49,8 @@ Cache Summary                        |
     mpki                             |      13.91
 DRAM summary                         |           
   num dram accesses                  |       2192
-  average dram access latency (ns)   |      72.18
-  average dram queueing delay        |      18.75
+  average dram access latency (ns)   |      72.22
+  average dram queueing delay        |      18.79
   average dram bandwidth utilization |     18.00%
 Coherency Traffic                    |           
   num loads from dram                |       1058
