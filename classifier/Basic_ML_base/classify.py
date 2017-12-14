@@ -16,7 +16,7 @@ np.random.seed(7)
 
 # load the dataset 
 #df = pd.read_csv('data.csv')
-df = pd.read_table('data.csv', sep=",", usecols=range(173))
+df = pd.read_table('data.csv', sep=",", usecols=range(164))
 #print df
 
 # plot original data.csv over time
@@ -49,7 +49,7 @@ model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['ac
 print(model.summary())
 
 # diagnosis
-history = model.fit(X_train, y_train, epochs=175, batch_size=64, validation_split = 0.33)
+history = model.fit(X_train, y_train, epochs=200, batch_size=64, validation_split = 0.33)
 pyplot.plot(history.history['loss'])
 pyplot.plot(history.history['val_loss'])
 pyplot.title('model train vs validation loss')

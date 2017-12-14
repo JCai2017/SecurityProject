@@ -16,11 +16,11 @@ np.random.seed(7)
 
 # load the dataset 
 #df = pd.read_csv('data.csv')
-df = pd.read_table('data.csv', sep=",", usecols=range(173))
+df = pd.read_table('data.csv', sep=",", usecols=range(164))
 #print df
 
 # plot original data.csv over time
-for num in range(63):
+for num in range(7):
 	df.iloc[num].plot()
 pyplot.show()
 
