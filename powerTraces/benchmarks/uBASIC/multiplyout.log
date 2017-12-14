@@ -1,0 +1,41 @@
+Running test #1... ----------- Line number 10 ---------
+index_add: Adding index for line 10: 4204240.
+Expected 2, got it
+Expected 5, got it
+Expected 4, got it
+Expected 35, got it
+factor: token 2
+factor: number 11
+Expected 2, got it
+term: token 27
+factor: token 2
+factor: number 6
+Expected 2, got it
+term: 11 27 6
+term: 66
+expr: token 36
+expr: 66
+let_statement: assign 66 to 0
+Expected 36, got it
+----------- Line number 15 ---------
+index_find: Returning NULL.
+index_add: Adding index for line 15: 4204258.
+Expected 2, got it
+Expected 6, got it
+Print loop
+factor: token 4
+varfactor: obtaining 66 from variable 0
+Expected 4, got it
+term: token 36
+term: 66
+expr: token 36
+expr: 66
+66
+End of print
+----------- Line number 20 ---------
+index_find: Step   0. Found index for line 15: 4204258.
+index_find: Returning NULL.
+index_add: Adding index for line 20: 4204269.
+Expected 2, got it
+Expected 20, got it
+done. Run time: 0.000 s

@@ -16,7 +16,7 @@ np.random.seed(7)
 
 # load the dataset 
 #df = pd.read_csv('data.csv')
-df = pd.read_table('data.csv', sep=",", usecols=range(108))
+df = pd.read_table('data.csv', sep=",", usecols=range(173))
 #print df
 
 # plot original data.csv over time
@@ -42,14 +42,14 @@ X_test = np.reshape(X_test, (X_test.shape[0], 1, X_test.shape[1]))
 # truncate and pad input sequences
 # create the model
 model = Sequential()
-model.add(LSTM(25, input_shape=(X_train.shape[1], X_train.shape[2])))
+model.add(LSTM(125, input_shape=(X_train.shape[1], X_train.shape[2])))
 # Since it seems to be a categorical problem, use softmax activation instead of linear
 model.add(Dense(1 << 6, activation='softmax')) # 16 possible key values, activation, 16keys*4training-traces, 197us sigmoid
 model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy']) #rmsprop
 print(model.summary())
 
 # diagnosis
-history = model.fit(X_train, y_train, epochs=100, batch_size=64, validation_split = 0.33)
+history = model.fit(X_train, y_train, epochs=175, batch_size=64, validation_split = 0.33)
 pyplot.plot(history.history['loss'])
 pyplot.plot(history.history['val_loss'])
 pyplot.title('model train vs validation loss')

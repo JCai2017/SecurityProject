@@ -79,7 +79,6 @@ rem 45 print a, i, j, k\n\
 70 next i\n\
 80 end\n";
 
-
 static const char program_fibs[] =
 "20 let a = 1\n\
 40 let b = 1\n\
@@ -149,6 +148,10 @@ main(void)
   for(i = 0; i < 100; i ++){
     run(program_simple_add);
   }
+  // run(program_simple_multiply);
+  // run(program_loop);
+  // run(program_loop2);
+
   //assert(ubasic_get_variable(0) == (VARIABLE_TYPE)(126 * 126 * 10));
 
   //run(program_fibs);
